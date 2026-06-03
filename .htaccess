@@ -1,0 +1,44 @@
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# 1. Force HTTPS and WWW (Crucial for GSC to avoid duplicate domains)
+# ----------------------------------------------------------------------
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^eldergo\.in [NC]
+RewriteRule ^(.*)$ https://www.eldergo.in/$1 [L,R=301]
+
+# ----------------------------------------------------------------------
+# 2. Remove Trailing Slashes (e.g., /about-us/ -> /about-us)
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# ----------------------------------------------------------------------
+# 3. 301 Redirect .html extensions to clean URLs
+#    If a user or Google visits /about-us.html, redirect to /about-us
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
+# Prevent infinite loops with index.html
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^/?(.*)\.html$ /$1 [L,R=301]
+
+# Redirect /index or /index.html directly to root /
+RewriteRule ^index(\.html)?$ / [L,R=301]
+
+# ----------------------------------------------------------------------
+# 4. Silently Serve .html files for Clean URLs
+#    If someone visits /about-us, serve the about-us.html file securely
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# ----------------------------------------------------------------------
+# 5. Security Enhancements
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+```

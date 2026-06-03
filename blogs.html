@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-753S5ZP7PD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-753S5ZP7PD');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Explore ElderGo's travel blog for inspiring stories, helpful guides, and packing tips exclusively curated for senior citizen travelers.">
+    <meta name="keywords" content="senior citizen travel blog, elderly travel tips, group tours for seniors guides, travel stories for 60+, ElderGo blog">
+    <meta name="theme-color" content="#6A48F4">
+    <title>Travel Stories, Guides & Tips for Senior Citizens | ElderGo</title>
+
+    <!-- Canonical Tag for SEO -->
+    <link rel="canonical" href="https://www.eldergo.in/blogs.html" />
+
+    <!-- Open Graph Tags for Social/WhatsApp Sharing (Unique per page) -->
+    <meta property="og:title" content="Travel Stories & Tips for Senior Citizens | ElderGo Blog">
+    <meta property="og:description" content="Explore ElderGo's travel blog for inspiring stories, helpful guides, and packing tips exclusively curated for senior citizen travelers.">
+    <meta property="og:image" content="https://www.eldergo.in/blogs/assets/banner/blog-1-banner.avif">
+    <meta property="og:url" content="https://www.eldergo.in/blogs.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ElderGo">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travel Stories & Tips for Senior Citizens | ElderGo Blog">
+    <meta name="twitter:description" content="Explore ElderGo's travel blog for inspiring stories, helpful guides, and packing tips exclusively curated for senior citizen travelers.">
+    <meta name="twitter:image" content="https://www.eldergo.in/blogs/assets/banner/blog-1-banner.avif">
+
+    <!-- Speed Optimizations & Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload Critical Featured Image (LCP Optimization localized) -->
+    <link rel="preload" as="image" href="blogs/assets/banner/blog-1-banner.avif" fetchpriority="high">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/eldergo-logo/icon 2.webp">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Non-blocking Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Pre-compiled Tailwind CSS (CDN Removed) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Schema.org Markup: Organization / TravelAgency sitewide -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "ElderGo",
+      "url": "https://www.eldergo.in/",
+      "logo": "https://www.eldergo.in/assets/eldergo-logo/icon 2.webp",
+      "image": "https://www.eldergo.in/blogs/assets/banner/blog-1-banner.avif",
+      "description": "India's Best Premium International Travel Experiences for Senior Citizens. Safe, escorted, slow-paced group tours.",
+      "telephone": "+919036862200",
+      "email": "travel@eldergo.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/O Girija, MR-93, Sreenilayam, Merarannur, Karamana",
+        "addressLocality": "Thiruvananthapuram",
+        "addressRegion": "Kerala",
+        "postalCode": "695002",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ElderGoSeniorTours/",
+        "https://www.instagram.com/eldergo_official/",
+        "https://www.youtube.com/@EldergoTravel"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.eldergo.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blogs",
+        "item": "https://www.eldergo.in/blogs.html"
+      }]
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #000; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
+
+        /* Navbar (Light Theme logic) */
+        header { 
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #f3f4f6;
+            transition: padding 0.3s ease, box-shadow 0.3s ease; 
+        }
+        #navbar.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding-top: calc(15px + env(safe-area-inset-top)); padding-bottom: 15px; }
+        .nav-link { color: #000; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-link.active { color: #6A48F4; }
+
+        /* Search Bar Color States (Light Theme) */
+        .desktop-search-bar, .search-btn-mobile {
+            background-color: #f3f4f6; 
+            border-color: #e5e7eb; 
+            color: #4b5563; 
+        }
+        .desktop-search-bar:hover, .search-btn-mobile:hover {
+            background-color: #e5e7eb; 
+            color: #000000;
+        }
+        .desktop-search-bar kbd { background-color: #ffffff; border-color: #d1d5db; color: #4b5563; }
+        
+        /* Modal & Mobile Menu styles */
+        #enquire-modal, #search-modal { transition: opacity 0.3s ease, visibility 0.3s ease; opacity: 0; visibility: hidden; }
+        #enquire-modal.open, #search-modal.open { opacity: 1; visibility: visible; }
+        #mobile-menu { z-index: 5000; }
+
+        /* Line Clamp for Blog Excerpts */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Hide Scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        #search-modal-container::-webkit-scrollbar { width: 6px; }
+        #search-modal-container::-webkit-scrollbar-track { background: transparent; }
+        #search-modal-container::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 6px; }
+
+        /* WhatsApp & Call Floating Buttons */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px; z-index: 999;
+            background-color: #25D366; color: white;
+            border-radius: 50%; width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); 
+            transition: transform 0.3s ease;
+        }
+        .call-float {
+            position: fixed; bottom: 85px; right: 20px; z-index: 999;
+            background-color: #6A48F4; color: white;
+            border-radius: 50%; width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(106, 72, 244, 0.4); 
+            transition: transform 0.3s ease;
+        }
+        @media (min-width: 768px) {
+            .whatsapp-float { bottom: 30px; right: 30px; width: 60px; height: 60px; }
+            .call-float { bottom: 105px; right: 30px; width: 60px; height: 60px; }
+        }
+        .whatsapp-float:hover, .call-float:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="antialiased bg-gray-50 pt-[90px] md:pt-[100px]"> 
+
+    <!-- Header (Fixed - Light Theme Default) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 w-full z-50 pt-[calc(20px+env(safe-area-inset-top))] pb-5">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+            <!-- Main Navbar Container -->
+            <div class="flex justify-between items-center w-full gap-2 xl:gap-4">
+                
+                <!-- LEFT SIDE: Hamburger (Mobile), Logo & Text -->
+                <div class="flex items-center gap-2 md:gap-3 shrink-0 w-auto lg:w-[25%] xl:w-1/4">
+                    <!-- Hamburger (Visible only on Mobile) -->
+                    <button id="menu-btn" aria-label="Open Menu" class="lg:hidden p-1 focus:outline-none transition-colors duration-300 nav-link min-h-[48px] min-w-[48px] flex items-center justify-center">
+                        <i data-lucide="menu" class="w-8 h-8 menu-icon-color transition-colors duration-300"></i>
+                    </button>
+
+                    <!-- Logo & Text -->
+                    <a href="index.html" class="flex items-center gap-2 md:gap-3 group shrink-0 min-h-[48px]">
+                        <img src="assets/eldergo-logo/icon 2.webp" alt="Icon 2" fetchpriority="high" decoding="async" class="h-8 md:h-12 w-auto object-contain" onerror="this.src='https://ui-avatars.com/api/?name=EG&background=6A48F4&color=fff&rounded=true'">
+                        <div class="flex flex-col gap-[2px]">
+                            <div class="font-sans font-bold text-xl md:text-3xl leading-none tracking-tight flex items-baseline">
+                                <span class="text-black transition-colors duration-300">elder</span><span class="text-elder-primary">go</span>
+                            </div>
+                            <span class="text-[0.55rem] md:text-[0.7rem] font-medium uppercase tracking-[0.25em] md:text-right leading-tight text-black transition-colors duration-300 mt-[4px]">Senior Tours</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CENTER: Premium Desktop Search Bar (Light Theme) -->
+                <div class="hidden lg:flex flex-1 justify-center px-2 xl:px-4">
+                    <button onclick="toggleSearchModal()" aria-label="Search Tours" class="desktop-search-bar border flex items-center justify-between w-full max-w-[300px] xl:max-w-[420px] px-4 xl:px-6 py-2 xl:py-2.5 rounded-full transition-all duration-300 shadow-sm group min-h-[48px]">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-search text-sm group-hover:scale-110 transition-transform"></i>
+                            <span class="text-[14px] xl:text-[15px] font-medium tracking-wide placeholder-text opacity-90">Search tours</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- RIGHT SIDE: Desktop Nav & Mobile Search Bar -->
+                <div class="flex items-center justify-end shrink-0 w-auto lg:w-auto xl:w-fit">
+                    
+                    <!-- Desktop Nav (Hidden on Mobile) -->
+                    <nav class="hidden lg:flex items-center lg:gap-4 xl:gap-6">
+                        <a href="index.html" class="nav-link font-bold lg:text-[11px] xl:text-[13px] tracking-widest uppercase hover:-translate-y-0.5 transform transition-transform min-h-[48px] flex items-center">Home</a>
+                        <a href="tours.html" class="nav-link font-bold lg:text-[11px] xl:text-[13px] tracking-widest uppercase hover:-translate-y-0.5 transform transition-transform min-h-[48px] flex items-center">Tours</a>
+                        <a href="about-us.html" class="nav-link font-bold lg:text-[11px] xl:text-[13px] tracking-widest uppercase hover:-translate-y-0.5 transform transition-transform min-h-[48px] flex items-center">About Us</a>
+                        <a href="blogs.html" class="nav-link active font-bold lg:text-[11px] xl:text-[13px] tracking-widest uppercase hover:-translate-y-0.5 transform transition-transform text-elder-primary min-h-[48px] flex items-center" style="color: #6A48F4;">Blogs</a>
+                        <a href="contact-us.html" class="nav-link font-bold lg:text-[11px] xl:text-[13px] tracking-widest uppercase hover:-translate-y-0.5 transform transition-transform min-h-[48px] flex items-center">Contact Us</a>
+                        
+                        <!-- CTA Button -->
+                        <a href="contact-us.html" class="inline-flex items-center justify-center bg-elder-primary hover:bg-elder-secondary text-white lg:px-5 xl:px-8 py-3 rounded-full font-bold transition-all shadow-lg transform hover:-translate-y-1 whitespace-nowrap lg:text-[15px] min-h-[48px]">Enquire Now</a>
+                    </nav>
+
+                    <!-- Mobile Search Bar (Visible only on Mobile) -->
+                    <div class="flex items-center lg:hidden ml-2">
+                        <button onclick="toggleSearchModal()" aria-label="Search Tours" class="search-btn-mobile border flex items-center gap-2 px-5 py-2.5 rounded-full transition-colors duration-300 shadow-sm min-h-[48px]">
+                            <i class="fas fa-search text-[16px]"></i>
+                            <span class="text-[15px] font-semibold tracking-wide placeholder-text">Search</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Full Screen Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[5000] transform -translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-6 shadow-2xl h-dvh overflow-y-auto w-full">
+        <button id="close-menu" aria-label="Close Menu" class="absolute top-6 right-6 text-black p-4 hover:bg-gray-100 rounded-full transition-colors focus:outline-none cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center">
+            <i class="fas fa-times text-3xl"></i>
+        </button>
+        <a href="index.html" class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Home</a>
+        <a href="tours.html" class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Tours</a>
+        <a href="about-us.html" class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">About Us</a>
+        <a href="blogs.html" class="mobile-link text-3xl font-serif text-elder-primary font-bold transition-colors py-2">Blogs</a>
+        <a href="contact-us.html" class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Contact Us</a>
+        
+        <div class="w-24 h-px bg-gray-200 my-4"></div>
+        
+        <div class="flex flex-col gap-4 w-72">
+            <a href="https://api.whatsapp.com/send/?phone=919187453465&text=Hello%2C%0A%0AI%E2%80%99m+reaching+out+from+ElderGo+website.%0A%0AI%E2%80%99d+like+to+know+more+about+your+upcoming+trips%21&type=phone_number&app_absent=0" class="flex items-center justify-center gap-3 text-black border border-gray-300 py-4 rounded-full hover:bg-green-50 hover:border-green-400 transition-all font-bold text-[16px]" target="_blank"><i class="fab fa-whatsapp text-2xl text-green-500"></i> WhatsApp</a>
+            <a href="tel:+919036862200" class="flex items-center justify-center gap-3 bg-elder-primary text-white py-4 rounded-full hover:bg-elder-secondary transition-all font-bold text-[16px]"><i class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> Call Now</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="bg-elder-surface py-8 md:py-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-200 rounded-full blur-[150px] opacity-40 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+            <span class="text-elder-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 md:mb-3 block">ElderGo Chronicles</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-elder-black mb-4 md:mb-6">Stories from the Road</h1>
+            <p class="text-gray-600 text-[15px] md:text-lg max-w-2xl mx-auto">
+                Weekly inspiration, travel tips, and heartwarming stories from our community of senior travelers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Weekly Blog (Hidden on Page > 1) -->
+    <section id="featured-blog" class="py-6 md:py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+            <div class="bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 group cursor-pointer" onclick="window.location.href='blogs/international-tours-for-senior-citizens.html'">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <!-- Image Side -->
+                    <div class="relative h-[250px] md:h-auto overflow-hidden">
+                        <img src="blogs/assets/banner/blog-1-banner.avif" fetchpriority="high" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog 1 Banner">
+                        <div class="absolute top-4 left-4 md:top-6 md:left-6 bg-elder-primary text-white text-[10px] md:text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded-full uppercase tracking-wider shadow-lg z-10">
+                            ✨ This Week's Highlight
+                        </div>
+                    </div>
+                    <!-- Content Side -->
+                    <div class="p-6 md:p-12 lg:p-16 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 text-[11px] md:text-sm text-gray-500 mb-4 md:mb-6">
+                            <span class="flex items-center gap-1.5 md:gap-2"><i class="far fa-calendar"></i> May 08, 2026</span>
+                            <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                            <span class="text-elder-primary font-bold uppercase tracking-widest">Travel Tips</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif text-elder-black mb-4 md:mb-6 leading-tight group-hover:text-elder-primary transition-colors">
+                            International Tours for Senior Citizens – Safe, Comfortable, and Hassle-Free Travel
+                        </h2>
+                        <p class="text-gray-600 text-sm md:text-[17px] mb-6 md:mb-8 leading-relaxed line-clamp-3">
+                            International travel has become increasingly popular among senior citizens who want to explore new cultures, enjoy relaxing vacations, and experience memorable journeys after retirement. Today, elderly travelers are looking for well-organized international tour packages that provide comfort, safety, convenience, and complete travel assistance.
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <span class="inline-flex items-center gap-2 bg-elder-black text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full font-bold group-hover:bg-elder-primary transition-all shadow-md text-sm md:text-base">
+                                Read Full Story <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Blogs Grid -->
+    <section id="recent-stories" class="py-6 md:py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-6 md:mb-8 gap-4">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif text-elder-black mb-2">Recent Stories</h2>
+                    <p class="text-gray-500 text-sm md:text-base">Explore our library of travel wisdom.</p>
+                </div>
+            </div>
+
+            <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- Blog Card 2 -->
+                <article class="blog-card group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='blogs/best-senior-citizen-tours-in-india-for-a-comfortable-vacation.html'">
+                    <div class="relative h-56 md:h-60 overflow-hidden">
+                        <img src="blogs/assets/banner/blog-2-banner.avif" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog 2 Banner">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-elder-primary shadow-sm">Domestic</span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="text-[10px] md:text-xs text-gray-400 mb-2 md:mb-3 font-bold uppercase tracking-widest">May 09, 2026</div>
+                        <h3 class="text-xl md:text-2xl font-serif text-elder-black mb-3 group-hover:text-elder-primary transition-colors line-clamp-2 leading-snug">
+                            Best Senior Citizen Tours in India for a Comfortable Vacation
+                        </h3>
+                        <p class="text-gray-500 text-sm md:text-[15px] leading-relaxed mb-6 flex-grow line-clamp-3">
+                            Travel is one of the best ways for senior citizens to relax, reconnect with loved ones, and experience new places. Today, more elderly travelers are choosing organized senior citizen tour packages in India because they offer comfort, safety, convenience, and companionship.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-elder-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='blogs/why-group-tours-are-the-best-travel-option-for-senior-citizens.html'">
+                    <div class="relative h-56 md:h-60 overflow-hidden">
+                        <img src="blogs/assets/banner/blog-3-banner.webp" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog 3 Banner">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-orange-500 shadow-sm">Travel Tips</span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="text-[10px] md:text-xs text-gray-400 mb-2 md:mb-3 font-bold uppercase tracking-widest">May 09, 2026</div>
+                        <h3 class="text-xl md:text-2xl font-serif text-elder-black mb-3 group-hover:text-elder-primary transition-colors line-clamp-2 leading-snug">
+                            Why Group Tours Are the Best Travel Option for Senior Citizens
+                        </h3>
+                        <p class="text-gray-500 text-sm md:text-[15px] leading-relaxed mb-6 flex-grow line-clamp-3">
+                            Traveling with organized groups has become one of the most preferred choices among senior citizens. Today, elderly travelers are increasingly choosing group tours because they provide comfort, safety, companionship, and stress-free travel experiences.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-elder-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Blog Card 4 -->
+                <article class="blog-card group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='blogs/international-travel-tips-for-senior-citizens-traveling-abroad-for-the-first-time.html'">
+                    <div class="relative h-56 md:h-60 overflow-hidden">
+                        <img src="blogs/assets/banner/blog-4-banner.webp" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog 4 Banner">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold text-elder-primary shadow-sm">International</span>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="text-[10px] md:text-xs text-gray-400 mb-2 md:mb-3 font-bold uppercase tracking-widest">May 05, 2026</div>
+                        <h3 class="text-xl md:text-2xl font-serif text-elder-black mb-3 group-hover:text-elder-primary transition-colors line-clamp-2 leading-snug">
+                            International Travel Tips for Senior Citizens Traveling Abroad for the First Time
+                        </h3>
+                        <p class="text-gray-500 text-sm md:text-[15px] leading-relaxed mb-6 flex-grow line-clamp-3">
+                            Traveling internationally for the first time can be an exciting experience for senior citizens. Many elderly travelers now choose overseas vacations after retirement to explore new cultures, enjoy relaxing holidays, and create memorable life experiences.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-elder-primary font-bold text-sm hover:gap-3 transition-all mt-auto">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Smart Dynamic Pagination -->
+            <div id="pagination-container" class="flex justify-center items-center gap-4 md:gap-6 mt-10 md:mt-14">
+                <button id="prev-page" class="px-6 py-2.5 rounded-full border border-gray-200 text-gray-400 font-bold text-sm md:text-base cursor-not-allowed transition-colors shadow-sm flex items-center gap-2" disabled>
+                    <i class="fas fa-chevron-left text-sm"></i> Previous
+                </button>
+                <span class="text-gray-500 font-medium text-sm md:text-base">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                <button id="next-page" class="px-6 py-2.5 rounded-full bg-elder-primary text-white hover:bg-elder-secondary font-bold text-sm md:text-base transition-colors shadow-sm flex items-center gap-2">
+                    Next <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-10 md:py-14 bg-elder-primary relative overflow-hidden">
+        <!-- Decorative Circles -->
+        <div class="absolute top-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 md:w-96 md:h-96 bg-white opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 text-white">
+            <i class="far fa-paper-plane text-3xl md:text-4xl mb-4 md:mb-6 inline-block animate-bounce-slow"></i>
+            <h2 class="text-3xl md:text-5xl font-serif mb-3 md:mb-4 leading-tight">Never Miss a Story</h2>
+            <p class="text-base md:text-lg opacity-90 mb-6 md:mb-8 max-w-lg mx-auto leading-relaxed">Get our weekly travel inspiration and exclusive tips for seniors delivered straight to your inbox. No spam, just joy.</p>
+            
+            <!-- ============================================== -->
+            <!-- FORMSPREE INTEGRATION FOR NEWSLETTER           -->
+            <!-- ============================================== -->
+            <form id="newsletter-form" action="https://formspree.io/f/xvzydnvn" method="POST" class="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mx-auto">
+                <!-- Hidden Subject line for the email you receive -->
+                <input type="hidden" name="_subject" value="New Newsletter Subscription from ElderGo Blog!">
+                
+                <!-- Email Input (Required by Formspree to be 'email' or '_replyto') -->
+                <input type="email" name="email" placeholder="Enter your email address" class="flex-grow px-5 py-3.5 md:px-6 md:py-4 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm md:text-base shadow-inner" required>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="bg-white text-elder-primary font-bold px-6 py-3.5 md:px-8 md:py-4 rounded-full hover:bg-elder-gold hover:text-black transition-colors shadow-lg text-sm md:text-base">Subscribe</button>
+            </form>
+            
+            <!-- Feedback Message for Newsletter -->
+            <p id="newsletter-message" class="hidden text-sm mt-3 font-bold"></p>
+            
+            <p class="text-[11px] md:text-xs mt-4 opacity-75 font-medium tracking-wide">Join 12,000+ subscribers.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#0a0a0a] text-gray-300 pt-8 md:pt-10 pb-6 md:pb-8 border-t border-gray-800 z-10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8 mb-6 md:mb-8">
+                
+                <!-- Brand Info -->
+                <div class="flex flex-col space-y-4 md:space-y-6 lg:col-span-2 lg:pr-8">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/eldergo-logo/icon 2.webp" class="h-8 md:h-10 w-auto object-contain drop-shadow-lg" alt="Icon 2" onerror="this.style.display='none'">
+                        <div class="flex flex-col gap-[2px]">
+                            <div class="font-sans font-bold text-2xl md:text-3xl leading-none tracking-tight text-white">
+                                elder<span class="text-elder-primary">go</span>
+                            </div>
+                            <span class="text-[0.55rem] md:text-[0.65rem] font-medium uppercase tracking-[0.25em] leading-tight text-white drop-shadow-sm mt-[2px]">Senior Tours</span>
+                        </div>
+                    </div>
+                    <p class="text-[14px] md:text-[15px] leading-relaxed text-gray-400">
+                        India's most trusted travel companion for senior citizens. Safe, slow-paced, and carefully curated journeys.
+                    </p>
+
+                    <div class="flex gap-4 pt-1 md:pt-2">
+                        <a href="https://www.facebook.com/ElderGoSeniorTours/" target="_blank" aria-label="Facebook" class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-elder-primary hover:text-white transition-colors"><i class="fab fa-facebook-f text-xs md:text-sm"></i></a>
+                        <a href="https://www.instagram.com/eldergo_official/" target="_blank" aria-label="Instagram" class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-elder-primary hover:text-white transition-colors"><i class="fab fa-instagram text-xs md:text-sm"></i></a>
+                        <a href="https://www.youtube.com/@EldergoTravel" target="_blank" aria-label="YouTube" class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors"><i class="fab fa-youtube text-xs md:text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 1: Explore Links -->
+                <div class="flex flex-col space-y-3 md:space-y-4">
+                    <h3 class="text-white font-bold text-base md:text-lg mb-1 md:mb-2">Explore</h3>
+                    <a href="tours.html" class="text-sm md:text-[15px] font-bold text-elder-primary hover:text-white transition-colors inline-block w-fit">Upcoming Departures</a>
+                    <a href="domestic-tours.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Domestic Tours</a>
+                    <a href="international-tours.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">International Tours</a>
+                    <a href="spiritual-journeys.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Spiritual Journeys</a>
+                    <a href="weekend-getaways.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Weekend Getaways</a>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="flex flex-col space-y-3 md:space-y-4">
+                    <h3 class="text-white font-bold text-base md:text-lg mb-1 md:mb-2">Quick Links</h3>
+                    <a href="index.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Home</a>
+                    <a href="tours.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Tours</a>
+                    <a href="about-us.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">About Us</a>
+                    <a href="blogs.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Blogs</a>
+                    <a href="careers.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Careers</a>
+                    <a href="contact-us.html" class="text-sm md:text-[15px] hover:text-elder-primary text-elder-gold transition-colors inline-block w-fit">Contact Us</a>
+                </div>
+
+                <!-- Column 3: Support Links -->
+                <div class="flex flex-col space-y-3 md:space-y-4">
+                    <h3 class="text-white font-bold text-base md:text-lg mb-1 md:mb-2">Support</h3>
+                    <a href="terms-conditions.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Terms & Conditions</a>
+                    <a href="privacy-policy.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Privacy Policy</a>
+                    <a href="fair-usage-policy.html" class="text-sm md:text-[15px] hover:text-white transition-colors inline-block w-fit">Fair Usage Policy</a>
+                </div>
+
+                <!-- Column 4: Contact Links -->
+                <div class="flex flex-col space-y-3 md:space-y-4">
+                    <h3 class="text-white font-bold text-base md:text-lg mb-1 md:mb-2">Contact Us</h3>
+                    <a href="tel:+919036862200" class="text-sm md:text-[15px] hover:text-white transition-colors inline-flex items-center gap-2 w-fit">
+                        <i class="fas fa-phone-alt text-elder-primary" style="transform: scaleX(-1);"></i> +91 90368 62200
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=919187453465&text=Hello%2C%0A%0AI%E2%80%99m+reaching+out+from+ElderGo+website.%0A%0AI%E2%80%99d+like+to+know+more+about+your+upcoming+trips%21&type=phone_number&app_absent=0" target="_blank" class="text-sm md:text-[15px] hover:text-white transition-colors inline-flex items-center gap-2 w-fit">
+                        <i class="fab fa-whatsapp text-green-500 text-lg"></i> WhatsApp Us
+                    </a>
+                    <a href="mailto:travel@eldergo.in" class="text-sm md:text-[15px] hover:text-white transition-colors inline-flex items-center gap-2 w-fit">
+                        <i class="fas fa-envelope text-elder-primary"></i> travel@eldergo.in
+                    </a>
+                    <div class="text-sm md:text-[15px] text-gray-400 inline-flex items-start gap-2 w-fit mt-1 leading-tight">
+                        <i class="fas fa-map-marker-alt text-elder-primary mt-1"></i> C/O Girija, MR-93, Sreenilayam,<br> Merarannur, Karamana,<br> Thiruvananthapuram, Kerala – 695002
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Bottom Copyright Strip -->
+            <div class="border-t border-gray-800 pt-5 md:pt-6 pb-2 md:pb-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left mb-4 md:mb-6">
+                    <p class="text-[12px] md:text-[13px] text-gray-500">
+                        © 2026 Eldaura Senior Adventures Private Limited. All Rights Reserved.
+                    </p>
+                    <p class="text-[11px] md:text-[12px] text-gray-500">
+                        CIN: U79110KL2024PTC091163 <span class="hidden md:inline mx-2">|</span><br class="md:hidden"> GSTIN: 32AAICE5592N1Z5
+                    </p>
+                </div>
+                
+                <!-- Bottom Row: Designed By (Center) -->
+                <div class="text-center w-full">
+                    <p class="text-[11px] md:text-[12px] text-gray-500 uppercase tracking-wider font-semibold inline-flex items-center justify-center gap-1">
+                        DESIGNED AND DEVELOPED BY <a href="https://www.strixova.com" target="_blank" class="text-[#EAB308] font-bold hover:text-white transition-colors inline-flex items-center gap-1 ml-1 group">STRIXOVA <i class="fas fa-arrow-right transform -rotate-45 text-[11px] md:text-[12px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i></a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="z-50 relative">
+        <a href="https://api.whatsapp.com/send/?phone=919187453465&text=Hello%2C%0A%0AI%E2%80%99m+reaching+out+from+ElderGo+website.%0A%0AI%E2%80%99d+like+to+know+more+about+your+upcoming+trips%21&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp" class="whatsapp-float">
+            <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
+        </a>
+        <a href="tel:+919036862200" aria-label="Call Now" class="call-float">
+            <i class="fas fa-phone-alt text-xl md:text-2xl" style="transform: scaleX(-1);"></i>
+        </a>
+    </div>
+
+    <!-- Global Search Modal -->
+    <div id="search-modal" class="fixed inset-0 z-[5000] bg-white/95 backdrop-blur-xl opacity-0 invisible transition-all duration-300 flex flex-col items-center pt-16 md:pt-20 px-4 overflow-y-auto">
+        <button onclick="toggleSearchModal()" class="absolute top-4 md:top-6 right-4 md:right-6 text-gray-500 hover:text-black bg-gray-100 hover:bg-gray-200 rounded-full min-h-[40px] min-w-[40px] md:min-h-[48px] md:min-w-[48px] flex items-center justify-center transition-colors">
+            <i class="fas fa-times text-xl md:text-2xl"></i>
+        </button>
+        
+        <div id="search-modal-container" class="w-full max-w-5xl relative mt-6 md:mt-10 overflow-visible pb-12">
+            <span class="text-elder-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 md:mb-3 block text-center md:text-left">Find Your Journey</span>
+            
+            <!-- Search Bar Input -->
+            <div class="relative w-full shadow-sm rounded-full bg-transparent">
+                <i class="fas fa-search absolute left-0 md:left-2 top-1/2 -translate-y-1/2 text-xl md:text-3xl text-gray-400"></i>
+                <input type="text" id="search-input" class="w-full text-xl md:text-5xl font-serif bg-transparent border-b-2 border-gray-300 focus:border-elder-primary outline-none py-3 md:py-4 pl-8 md:pl-14 pr-16 md:pr-20 text-black placeholder-gray-300 transition-colors" placeholder="Where to next?">
+                
+                <button id="clear-search-btn" onclick="clearSearch()" class="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 text-lg md:text-2xl text-gray-300 hover:text-red-500 transition-colors focus:outline-none hidden min-h-[48px] min-w-[48px]" title="Clear Search">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+            </div>
+
+            <!-- RECOMMENDATIONS UI -->
+            <div id="search-recommendations" class="w-full mt-6 md:mt-8 animate-fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
+                    <div class="lg:col-span-4 flex flex-col gap-6 md:gap-8">
+                        <div>
+                            <h3 class="text-[10px] md:text-[13px] font-bold tracking-widest uppercase text-gray-400 mb-3 md:mb-4 flex items-center gap-2"><i class="fas fa-fire text-elder-primary"></i> Trending Now</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span onclick="fillSearch('Bali')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-purple-50 text-elder-primary border border-purple-100 rounded-full text-sm md:text-[16px] font-medium hover:bg-elder-primary hover:text-white transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bali</span>
+                                <span onclick="fillSearch('Bhutan')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bhutan</span>
+                                <span onclick="fillSearch('Malaysia')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Malaysia</span>
+                                <span onclick="fillSearch('Mauritius')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Mauritius</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-results" class="hidden w-full mt-8 md:mt-10 pb-12 flex-col"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- UNMINIFIED JAVASCRIPT & FORMSPREE INTEGRATION                  -->
+    <!-- ============================================================== -->
+    <script>
+        const searchData = [
+            {title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour"},
+            {title: "Malaysia", url: "international-tours.html", subtitle: "International Tour"},
+            {title: "Mauritius", url: "international-tours.html", subtitle: "International Tour"},
+            {title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour"}
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof lucide !== "undefined") lucide.createIcons();
+
+            // Navbar Scroll Effect
+            const navbar = document.getElementById("navbar");
+            if (navbar) {
+                let ticking = false;
+                window.addEventListener("scroll", () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            if (window.scrollY > 20) {
+                                if (!navbar.classList.contains("scrolled")) navbar.classList.add("scrolled");
+                            } else {
+                                if (navbar.classList.contains("scrolled")) navbar.classList.remove("scrolled");
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            }
+
+            // Mobile Menu
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenu = document.getElementById("close-menu");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
+
+            if (menuBtn) {
+                menuBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    mobileMenu.classList.remove("-translate-x-full");
+                    document.body.style.overflow = "hidden";
+                });
+            }
+
+            const closeMobileMenu = () => {
+                mobileMenu.classList.add("-translate-x-full");
+                document.body.style.overflow = "";
+            };
+
+            if (closeMenu) closeMenu.addEventListener("click", closeMobileMenu);
+            mobileLinks.forEach(link => link.addEventListener("click", closeMobileMenu));
+
+            // Search Hotkey
+            window.addEventListener("keydown", (e) => {
+                if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+                    e.preventDefault();
+                    toggleSearchModal();
+                }
+            });
+
+            // Blog Pagination Logic
+            const blogCards = document.querySelectorAll(".blog-card");
+            const featuredBlog = document.getElementById("featured-blog");
+            const prevPageBtn = document.getElementById("prev-page");
+            const nextPageBtn = document.getElementById("next-page");
+            const currentPageEl = document.getElementById("current-page");
+            const totalPagesEl = document.getElementById("total-pages");
+            
+            const itemsPerPage = 6;
+            let currentPage = 1;
+            const totalPages = Math.ceil(blogCards.length / itemsPerPage);
+            
+            if (totalPagesEl) totalPagesEl.textContent = totalPages;
+
+            function updatePagination() {
+                if (featuredBlog) {
+                    if (currentPage === 1) {
+                        featuredBlog.style.display = "block";
+                    } else {
+                        featuredBlog.style.display = "none";
+                    }
+                }
+
+                blogCards.forEach((card, index) => {
+                    if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+                if (currentPage === 1) {
+                    if (prevPageBtn) {
+                        prevPageBtn.disabled = true;
+                        prevPageBtn.classList.remove("bg-elder-primary", "text-white", "hover:bg-elder-secondary");
+                        prevPageBtn.classList.add("border-gray-200", "text-gray-400", "cursor-not-allowed", "bg-transparent");
+                    }
+                } else {
+                    if (prevPageBtn) {
+                        prevPageBtn.disabled = false;
+                        prevPageBtn.classList.remove("border-gray-200", "text-gray-400", "cursor-not-allowed", "bg-transparent");
+                        prevPageBtn.classList.add("bg-elder-primary", "text-white", "hover:bg-elder-secondary");
+                    }
+                }
+
+                if (currentPage >= totalPages || totalPages === 0) {
+                    if (nextPageBtn) {
+                        nextPageBtn.disabled = true;
+                        nextPageBtn.classList.remove("bg-elder-primary", "text-white", "hover:bg-elder-secondary");
+                        nextPageBtn.classList.add("border-gray-200", "text-gray-400", "cursor-not-allowed", "bg-transparent");
+                    }
+                } else {
+                    if (nextPageBtn) {
+                        nextPageBtn.disabled = false;
+                        nextPageBtn.classList.remove("border-gray-200", "text-gray-400", "cursor-not-allowed", "bg-transparent");
+                        nextPageBtn.classList.add("bg-elder-primary", "text-white", "hover:bg-elder-secondary");
+                    }
+                }
+
+                if (currentPageEl) currentPageEl.textContent = currentPage;
+
+                if (event && event.type === "click") {
+                    const recentStoriesEl = document.getElementById("recent-stories");
+                    if(recentStoriesEl) recentStoriesEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }
+
+            if (prevPageBtn) {
+                prevPageBtn.addEventListener("click", (e) => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        updatePagination();
+                    }
+                });
+            }
+
+            if (nextPageBtn) {
+                nextPageBtn.addEventListener("click", (e) => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        updatePagination();
+                    }
+                });
+            }
+
+            if (blogCards.length > 0) updatePagination();
+
+            // ==============================================
+            // FORMSPREE AJAX SUBMISSION LOGIC (NEWSLETTER)
+            // ==============================================
+            const newsletterForm = document.getElementById("newsletter-form");
+            if (newsletterForm) {
+                newsletterForm.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    const messageBox = document.getElementById("newsletter-message");
+
+                    // UI Loading State
+                    submitBtn.innerHTML = 'Wait... <i class="fas fa-spinner fa-spin ml-1 text-elder-primary"></i>';
+                    submitBtn.disabled = true;
+                    messageBox.classList.add("hidden");
+
+                    // Fetch Request to Formspree
+                    fetch(this.action, {
+                        method: "POST",
+                        body: new FormData(this),
+                        headers: {
+                            'Accept': 'application/json' // Prevents redirect
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // SUCCESS
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "text-sm mt-3 font-bold text-green-300";
+                            messageBox.innerHTML = "<i class='fas fa-check-circle'></i> Thanks for subscribing!";
+                            this.reset(); // Clear the form
+                        } else {
+                            // ERROR returned by Formspree
+                            response.json().then(data => {
+                                messageBox.classList.remove("hidden");
+                                messageBox.className = "text-sm mt-3 font-bold text-red-300";
+                                if (Object.hasOwn(data, 'errors')) {
+                                    messageBox.textContent = data["errors"].map(error => error["message"]).join(", ");
+                                } else {
+                                    messageBox.textContent = "Oops! There was a problem.";
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        // NETWORK ERROR
+                        messageBox.classList.remove("hidden");
+                        messageBox.className = "text-sm mt-3 font-bold text-red-300";
+                        messageBox.textContent = "Connection error. Please try again.";
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+        });
+
+        // Search Modal & Other Global Logic
+        const searchModal = document.getElementById("search-modal");
+        const searchInput = document.getElementById("search-input");
+        const searchRecommendations = document.getElementById("search-recommendations");
+        const searchResults = document.getElementById("search-results");
+        const clearSearchBtn = document.getElementById("clear-search-btn");
+
+        function handleSearchInput(e) {
+            const query = e.toLowerCase().trim();
+            if (query.length === 0) {
+                searchRecommendations.classList.remove("hidden");
+                searchResults.classList.add("hidden");
+                clearSearchBtn.classList.add("hidden");
+                searchResults.innerHTML = "";
+                return;
+            }
+            
+            clearSearchBtn.classList.remove("hidden");
+            searchRecommendations.classList.add("hidden");
+            searchResults.classList.remove("hidden");
+            
+            const results = searchData.filter(item => item.title.toLowerCase().includes(query));
+            
+            if (results.length > 0) {
+                let html = '<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden w-full max-w-3xl mr-auto">';
+                results.forEach(item => {
+                    html += `
+                        <a href="${item.url}" class="flex items-center gap-4 p-4 hover:bg-purple-50 transition-colors border-b border-gray-50 last:border-0 group">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-elder-primary transition-colors">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <h4 class="text-[16px] md:text-lg font-bold text-gray-900 group-hover:text-elder-primary transition-colors">${item.title}</h4>
+                                <p class="text-[12px] md:text-sm text-gray-500">${item.subtitle}</p>
+                            </div>
+                            <i class="fas fa-chevron-right ml-auto text-gray-300 group-hover:text-elder-primary transition-colors text-sm"></i>
+                        </a>
+                    `;
+                });
+                html += "</div>";
+                searchResults.innerHTML = html;
+            } else {
+                searchResults.innerHTML = `
+                    <div class="text-center py-10 w-full max-w-3xl mr-auto bg-white rounded-2xl border border-gray-100">
+                        <i class="fas fa-search text-4xl text-gray-200 mb-3"></i>
+                        <h4 class="text-lg font-bold text-gray-900 mb-1">No tours found</h4>
+                        <p class="text-gray-500">We couldn't find any tours matching "${query}"</p>
+                    </div>
+                `;
+            }
+        }
+
+        window.toggleSearchModal = function() {
+            searchModal.classList.toggle("open");
+            searchModal.classList.toggle("invisible");
+            if (!searchModal.classList.contains("invisible")) {
+                clearSearch();
+                setTimeout(() => searchInput.focus(), 100);
+            }
+        };
+
+        window.clearSearch = function() {
+            searchInput.value = "";
+            searchRecommendations.classList.remove("hidden");
+            searchResults.classList.add("hidden");
+            clearSearchBtn.classList.add("hidden");
+            searchResults.innerHTML = "";
+            searchInput.focus();
+        };
+
+        window.fillSearch = function(query) {
+            searchInput.value = query;
+            handleSearchInput({ target: { value: query } });
+        };
+
+        if(searchInput) {
+            searchInput.addEventListener("input", e => handleSearchInput(e.target.value));
+        }
+    </script>
+</body>
+</html>

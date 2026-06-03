@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point search engines directly to your XML sitemap
+Sitemap: https://www.eldergo.in/sitemap.xml
