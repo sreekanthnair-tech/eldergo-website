@@ -2,15 +2,15 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-753S5ZP7PD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-753S5ZP7PD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-753S5ZP7PD');
-</script>
+        gtag('config', 'G-753S5ZP7PD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description"
@@ -413,7 +413,7 @@
 
                     <a href="index.html" class="flex items-center gap-2 md:gap-3 group shrink-0 min-h-[48px]">
                         <img src="assets/eldergo-logo/icon 2.webp" alt="Icon 2"
-                            class="h-8 md:h-12 w-auto object-contain" fetchpriority="high">
+                            class="h-8 md:h-12 w-auto object-contain" fetchpriority="high" width="1920" height="1920">
                         <div class="flex flex-col gap-[2px]">
                             <div
                                 class="font-sans font-bold text-xl md:text-3xl leading-none tracking-tight flex items-baseline">
@@ -506,12 +506,12 @@
     <!-- 1. FULL SCREEN HERO SLIDER -->
     <section id="home" class="relative h-dvh w-full overflow-hidden bg-[#110B29]">
 
+        <!-- FIXED: Strict pixel padding on desktop (130px/150px) guarantees it ALWAYS clears the ~90px navbar, completely preventing the text from hitting the logo on small laptops. -->
         <div
-            class="absolute inset-0 z-30 flex flex-col justify-start pt-[14vh] md:justify-center md:pt-0 items-center text-center px-4 pointer-events-none">
+            class="absolute inset-0 z-30 flex flex-col justify-start pt-[14vh] md:pt-[130px] lg:pt-[150px] items-center text-center px-4 pointer-events-none">
             <div class="absolute inset-0 bg-black/40 -z-10"></div>
 
-            <div
-                class="max-w-[100vw] lg:max-w-6xl xl:max-w-7xl pointer-events-auto w-full flex flex-col items-center translate-y-0 md:-translate-y-[18vh]">
+            <div class="max-w-[100vw] lg:max-w-6xl xl:max-w-7xl pointer-events-auto w-full flex flex-col items-center">
                 <p
                     class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 font-bold tracking-[0.2em] uppercase text-base md:text-lg mb-4 drop-shadow-md">
                     ElderGo</p>
@@ -541,28 +541,28 @@
 
         <div class="hero-slide active" style="transition: none;">
             <img src="assets/hero/world.webp" fetchpriority="high" decoding="sync" alt="World"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1599" height="1111">
         </div>
 
         <div class="hero-slide">
             <img data-src="assets/hero/bhutan-group.webp" alt="Bhutan Group"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
         </div>
         <div class="hero-slide">
             <img data-src="assets/hero/kashmir.webp" alt="Kashmir"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1387" height="911">
         </div>
         <div class="hero-slide">
             <img data-src="assets/hero/vietnam.webp" alt="Vietnam"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
         </div>
         <div class="hero-slide">
             <img data-src="assets/hero/bali-group.webp" alt="Bali Group"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
         </div>
         <div class="hero-slide">
             <img data-src="assets/hero/srilanka.webp" alt="Sri Lanka"
-                class="w-full h-full object-cover pointer-events-none">
+                class="w-full h-full object-cover pointer-events-none" width="1280" height="794">
         </div>
 
         <a href="#featured-tours"
@@ -609,7 +609,8 @@
                         class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/bhutan.webp" loading="lazy" decoding="async" alt="Bhutan"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                width="1536" height="920">
                             <div
                                 class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0">
                             </div>
@@ -658,7 +659,8 @@
                         class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/bali.webp" loading="lazy" decoding="async" alt="Bali"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                width="1920" height="960">
                             <div
                                 class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0">
                             </div>
@@ -707,7 +709,8 @@
                         class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/malaysia.webp" loading="lazy" decoding="async" alt="Malaysia"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                width="1280" height="720">
                             <div
                                 class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0">
                             </div>
@@ -745,7 +748,8 @@
                         class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/mauritius.webp" loading="lazy" decoding="async" alt="Mauritius"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                width="1920" height="960">
                             <div
                                 class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0">
                             </div>
@@ -824,7 +828,7 @@
                     class="group relative rounded-2xl md:rounded-[2rem] overflow-hidden h-[320px] md:h-auto md:aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-500 block transform">
                     <img src="assets/tours-card/international.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        alt="International">
+                        alt="International" width="1920" height="1080">
                     <div
                         class="absolute inset-0 bg-black/40 md:bg-transparent md:bg-gradient-to-t md:from-[#0a0a0a] md:via-[#0a0a0a]/60 md:to-transparent opacity-90 md:opacity-100 group-hover:opacity-100 transition-all duration-500">
                     </div>
@@ -851,7 +855,7 @@
                     class="group relative rounded-2xl md:rounded-[2rem] overflow-hidden h-[320px] md:h-auto md:aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-500 block transform">
                     <img src="assets/tours-card/domestictours.avif" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        alt="Domestic Tours">
+                        alt="Domestic Tours" width="800" height="450">
                     <div
                         class="absolute inset-0 bg-black/40 md:bg-transparent md:bg-gradient-to-t md:from-[#0a0a0a] md:via-[#0a0a0a]/60 md:to-transparent opacity-90 md:opacity-100 group-hover:opacity-100 transition-all duration-500">
                     </div>
@@ -878,7 +882,7 @@
                     class="group relative rounded-2xl md:rounded-[2rem] overflow-hidden h-[320px] md:h-auto md:aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-500 block transform">
                     <img src="assets/tours-card/spiritual.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        alt="Spiritual">
+                        alt="Spiritual" width="1920" height="1281">
                     <div
                         class="absolute inset-0 bg-black/40 md:bg-transparent md:bg-gradient-to-t md:from-[#0a0a0a] md:via-[#0a0a0a]/60 md:to-transparent opacity-90 md:opacity-100 group-hover:opacity-100 transition-all duration-500">
                     </div>
@@ -905,7 +909,7 @@
                     class="group relative rounded-2xl md:rounded-[2rem] overflow-hidden h-[320px] md:h-auto md:aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-500 block transform">
                     <img src="assets/tours-card/weekend.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        alt="Weekend">
+                        alt="Weekend" width="1920" height="1281">
                     <div
                         class="absolute inset-0 bg-black/40 md:bg-transparent md:bg-gradient-to-t md:from-[#0a0a0a] md:via-[#0a0a0a]/60 md:to-transparent opacity-90 md:opacity-100 group-hover:opacity-100 transition-all duration-500">
                     </div>
@@ -947,7 +951,7 @@
                     class="md:col-span-2 relative rounded-[2rem] overflow-hidden min-h-[300px] lg:min-h-[340px] group shadow-lg hover:shadow-xl transition-all duration-300">
                     <img src="assets/hero/bhutan-statue-group.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Bhutan Statue Group">
+                        alt="Bhutan Statue Group" width="1920" height="761">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
                     <div class="absolute bottom-0 left-0 p-6 md:p-8 lg:p-10 z-10 max-w-lg">
@@ -963,7 +967,7 @@
                     class="md:col-span-1 relative rounded-[2rem] overflow-hidden min-h-[300px] lg:min-h-[340px] group shadow-lg hover:shadow-xl transition-all duration-300">
                     <img src="assets/hero/airport.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Airport">
+                        alt="Airport" width="1920" height="1473">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
                     <div class="absolute bottom-0 left-0 p-6 md:p-8 z-10 w-full">
@@ -979,7 +983,7 @@
                     class="md:col-span-1 relative rounded-[2rem] overflow-hidden min-h-[300px] lg:min-h-[340px] group shadow-lg hover:shadow-xl transition-all duration-300">
                     <img src="assets/hero/resort.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Resort">
+                        alt="Resort" width="1920" height="1812">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
                     <div class="absolute bottom-0 left-0 p-6 md:p-8 z-10 w-full">
@@ -995,7 +999,7 @@
                     class="md:col-span-2 relative rounded-[2rem] overflow-hidden min-h-[300px] lg:min-h-[340px] group shadow-lg hover:shadow-xl transition-all duration-300">
                     <img src="assets/hero/bali-sunrise.webp" loading="lazy" decoding="async"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Bali Sunrise">
+                        alt="Bali Sunrise" width="1920" height="1521">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
                     <div class="absolute bottom-0 left-0 p-8 md:p-10 z-10 max-w-lg">
@@ -1036,7 +1040,8 @@
                                 class="absolute inset-0 bg-gray-900 flex items-center justify-center video-container z-10">
                                 <img src="https://i.ytimg.com/vi/0yAEaf_YRpw/hqdefault.jpg" loading="lazy"
                                     decoding="async" alt="Hqdefault"
-                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+                                    width="480" height="360">
                                 <div
                                     class="absolute w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-110">
                                     <i class="fas fa-play text-gray-900 text-xl md:text-2xl pl-1"></i>
@@ -1060,7 +1065,8 @@
                                 class="absolute inset-0 bg-gray-900 flex items-center justify-center video-container z-10">
                                 <img src="https://i.ytimg.com/vi/CZXybUXJdJU/hqdefault.jpg" loading="lazy"
                                     decoding="async" alt="Hqdefault"
-                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+                                    width="480" height="360">
                                 <div
                                     class="absolute w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-110">
                                     <i class="fas fa-play text-gray-900 text-xl md:text-2xl pl-1"></i>
@@ -1083,7 +1089,8 @@
                                 class="absolute inset-0 bg-gray-900 flex items-center justify-center video-container z-10">
                                 <img src="https://i.ytimg.com/vi/AcXV0xlbiIo/hqdefault.jpg" loading="lazy"
                                     decoding="async" alt="Hqdefault"
-                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                                    class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+                                    width="480" height="360">
                                 <div
                                     class="absolute w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-110">
                                     <i class="fas fa-play text-gray-900 text-xl md:text-2xl pl-1"></i>
@@ -1262,21 +1269,29 @@
 
                 <div class="flex gap-4 md:gap-6 py-4 w-max animate-marquee hover:[animation-play-state:paused]">
                     <img src="assets/google-reviews/review-1.webp" loading="lazy" decoding="async" alt="Review 1"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="1002"
+                        height="413">
                     <img src="assets/google-reviews/review-2.webp" loading="lazy" decoding="async" alt="Review 2"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="1020"
+                        height="390">
                     <img src="assets/google-reviews/review-3.webp" loading="lazy" decoding="async" alt="Review 3"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="993"
+                        height="427">
                     <img src="assets/google-reviews/review-4.webp" loading="lazy" decoding="async" alt="Review 4"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="992"
+                        height="426">
                     <img src="assets/google-reviews/review-1.webp" loading="lazy" decoding="async" alt="Review 1"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="1002"
+                        height="413">
                     <img src="assets/google-reviews/review-2.webp" loading="lazy" decoding="async" alt="Review 2"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="1020"
+                        height="390">
                     <img src="assets/google-reviews/review-3.webp" loading="lazy" decoding="async" alt="Review 3"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="993"
+                        height="427">
                     <img src="assets/google-reviews/review-4.webp" loading="lazy" decoding="async" alt="Review 4"
-                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200">
+                        class="w-[85vw] md:w-[450px] shrink-0 rounded-xl shadow-md border border-gray-200" width="992"
+                        height="426">
                 </div>
             </div>
 
@@ -1500,11 +1515,11 @@
                     class="relative w-full max-w-[340px] md:max-w-md mx-auto lg:max-w-none order-2 lg:order-2 aspect-[4/5] lg:aspect-square mt-2 lg:mt-0 mb-3 lg:mb-0">
                     <img src="assets/hero/srilanka-golden-temple.webp" loading="lazy" decoding="async"
                         class="absolute top-0 right-0 w-[80%] h-[75%] object-cover rounded-[2rem] md:rounded-[2.5rem] shadow-2xl"
-                        alt="Sri Lanka Golden Temple">
+                        alt="Sri Lanka Golden Temple" width="1920" height="1440">
 
                     <img src="assets/hero/group-eldergo.webp" loading="lazy" decoding="async"
                         class="absolute bottom-0 left-0 w-[75%] h-[65%] object-cover rounded-[2rem] md:rounded-[2.5rem] border-[6px] md:border-[10px] border-[#110B29] shadow-2xl"
-                        alt="Group ElderGo">
+                        alt="Group ElderGo" width="1920" height="1440">
 
                     <div
                         class="absolute top-[45%] left-[50%] transform -translate-x-[20%] -translate-y-[10%] w-24 h-24 md:w-32 md:h-32 bg-[#5B63D3] rounded-full flex flex-col items-center justify-center shadow-2xl z-20 border-[3px] border-[#110B29]">
@@ -1554,7 +1569,7 @@
                         <div class="flex items-center gap-3 md:gap-4">
                             <img src="assets/team/sreekanth-headshot.webp" loading="lazy" decoding="async"
                                 class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/20"
-                                alt="Sreekanth Headshot">
+                                alt="Sreekanth Headshot" width="1086" height="1449">
                             <div>
                                 <h3 class="text-lg md:text-xl font-serif text-white italic">The ElderGo Family</h3>
                                 <p
@@ -1722,7 +1737,7 @@
                 <div class="flex flex-col space-y-4 lg:col-span-2 lg:pr-8">
                     <div class="flex items-center gap-3">
                         <img src="assets/eldergo-logo/icon 2.webp" loading="lazy" decoding="async"
-                            class="h-10 w-auto object-contain drop-shadow-lg" alt="Icon 2">
+                            class="h-10 w-auto object-contain drop-shadow-lg" alt="Icon 2" width="1920" height="1920">
                         <div class="flex flex-col gap-[2px]">
                             <div class="font-sans font-bold text-3xl leading-none tracking-tight text-white">
                                 elder<span class="text-elder-primary">go</span>
