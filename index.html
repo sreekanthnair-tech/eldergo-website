@@ -44,18 +44,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- CRITICAL FIX: PRELOAD ONLY THE VERY FIRST IMAGE -->
+    <!-- CRITICAL FIX: PRELOAD MAIN CSS AND SINGLE HERO IMAGE -->
+    <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" as="image" href="assets/hero/world.webp" fetchpriority="high">
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/eldergo-logo/icon 2.webp">
 
-    <!-- Fonts -->
+    <!-- Fonts - with display=swap applied to ensure text is visible immediately -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Icons -->
+    <!-- Icons (Deferred & Non-Blocking) -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         media="print" onload="this.media='all'">
@@ -471,39 +472,39 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Full Screen Menu -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-[100] transform -translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-6 shadow-2xl">
-            <button id="close-menu" aria-label="Close Menu"
-                class="absolute top-6 right-6 text-black p-2 hover:bg-gray-100 rounded-full transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
-                <i class="fas fa-times text-3xl"></i>
-            </button>
-            <a href="index.html"
-                class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Home</a>
-            <a href="tours.html"
-                class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Tours</a>
-            <a href="about-us.html"
-                class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">About
-                Us</a>
-            <a href="blogs.html"
-                class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Blogs</a>
-            <a href="contact-us.html"
-                class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Contact
-                Us</a>
-            <div class="w-24 h-px bg-gray-200 my-4"></div>
-            <div class="flex flex-col gap-4 w-72">
-                <a href="https://api.whatsapp.com/send/?phone=919187453465"
-                    class="flex items-center justify-center gap-3 text-black border border-gray-300 py-4 rounded-full hover:bg-green-50 hover:border-green-400 transition-all font-semibold text-[17px]"
-                    target="_blank"><i class="fab fa-whatsapp text-2xl text-green-500"></i> WhatsApp</a>
-                <a href="tel:+919036862200"
-                    class="flex items-center justify-center gap-3 bg-elder-primary text-white py-4 rounded-full hover:bg-elder-secondary transition-all font-semibold text-[17px]"><i
-                        class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> Call Now</a>
-            </div>
-        </div>
     </header>
 
-    <!-- 1. FULL SCREEN HERO SLIDER -->
+    <!-- Mobile Full Screen Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-[100] transform -translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-6 shadow-2xl">
+        <button id="close-menu" aria-label="Close Menu"
+            class="absolute top-6 right-6 text-black p-2 hover:bg-gray-100 rounded-full transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+            <i class="fas fa-times text-3xl"></i>
+        </button>
+        <a href="index.html"
+            class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Home</a>
+        <a href="tours.html"
+            class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Tours</a>
+        <a href="about-us.html"
+            class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">About
+            Us</a>
+        <a href="blogs.html"
+            class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Blogs</a>
+        <a href="contact-us.html"
+            class="mobile-link text-3xl font-serif text-black hover:text-elder-primary transition-colors py-2">Contact
+            Us</a>
+        <div class="w-24 h-px bg-gray-200 my-4"></div>
+        <div class="flex flex-col gap-4 w-72">
+            <a href="https://api.whatsapp.com/send/?phone=919187453465"
+                class="flex items-center justify-center gap-3 text-black border border-gray-300 py-4 rounded-full hover:bg-green-50 hover:border-green-400 transition-all font-semibold text-[17px]"
+                target="_blank"><i class="fab fa-whatsapp text-2xl text-green-500"></i> WhatsApp</a>
+            <a href="tel:+919036862200"
+                class="flex items-center justify-center gap-3 bg-elder-primary text-white py-4 rounded-full hover:bg-elder-secondary transition-all font-semibold text-[17px]"><i
+                    class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> Call Now</a>
+        </div>
+    </div>
+
+    <!-- 1. FULL SCREEN HERO STATIC -->
     <section id="home" class="relative h-dvh w-full overflow-hidden bg-[#110B29]">
 
         <!-- FIXED: Strict pixel padding on desktop (130px/150px) guarantees it ALWAYS clears the ~90px navbar, completely preventing the text from hitting the logo on small laptops. -->
@@ -532,37 +533,39 @@
                     <p
                         class="text-white text-[4.5vw] min-[400px]:text-[17px] sm:text-[18px] md:text-xl lg:text-2xl font-medium tracking-wide text-center drop-shadow-md leading-relaxed">
                         Explore <span id="rotating-text"
-                            class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transition-opacity duration-300 opacity-100 px-1 inline-block">the
+                            class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 px-1 inline-block transition-opacity duration-300 opacity-100">the
                             World</span>.<br class="sm:hidden block mt-1"> We'll Handle Everything Else.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="hero-slide active" style="transition: none;">
-            <img src="assets/hero/world.webp" fetchpriority="high" decoding="sync" alt="World"
-                class="w-full h-full object-cover pointer-events-none" width="1599" height="1111">
-        </div>
-
-        <div class="hero-slide">
-            <img data-src="assets/hero/bhutan-group.webp" alt="Bhutan Group"
-                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
-        </div>
-        <div class="hero-slide">
-            <img data-src="assets/hero/kashmir.webp" alt="Kashmir"
-                class="w-full h-full object-cover pointer-events-none" width="1387" height="911">
-        </div>
-        <div class="hero-slide">
-            <img data-src="assets/hero/vietnam.webp" alt="Vietnam"
-                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
-        </div>
-        <div class="hero-slide">
-            <img data-src="assets/hero/bali-group.webp" alt="Bali Group"
-                class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
-        </div>
-        <div class="hero-slide">
-            <img data-src="assets/hero/srilanka.webp" alt="Sri Lanka"
-                class="w-full h-full object-cover pointer-events-none" width="1280" height="794">
+        <!-- Measurable, Preloaded Static Image (First Slide) + Rotating Slides -->
+        <div class="absolute inset-0 z-10 bg-[#110B29]">
+            <div class="hero-slide active" style="transition: none;">
+                <img src="assets/hero/world.webp" fetchpriority="high" decoding="sync" alt="Senior citizens traveling the world"
+                    class="w-full h-full object-cover pointer-events-none" width="1599" height="1111">
+            </div>
+            <div class="hero-slide">
+                <img data-src="assets/hero/bhutan-group.webp" alt="Bhutan Group"
+                    class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
+            </div>
+            <div class="hero-slide">
+                <img data-src="assets/hero/kashmir.webp" alt="Kashmir"
+                    class="w-full h-full object-cover pointer-events-none" width="1387" height="911">
+            </div>
+            <div class="hero-slide">
+                <img data-src="assets/hero/vietnam.webp" alt="Vietnam"
+                    class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
+            </div>
+            <div class="hero-slide">
+                <img data-src="assets/hero/bali-group.webp" alt="Bali Group"
+                    class="w-full h-full object-cover pointer-events-none" width="1440" height="1920">
+            </div>
+            <div class="hero-slide">
+                <img data-src="assets/hero/srilanka.webp" alt="Sri Lanka"
+                    class="w-full h-full object-cover pointer-events-none" width="1280" height="794">
+            </div>
         </div>
 
         <a href="#featured-tours"
@@ -1994,6 +1997,7 @@
             const rotatingText = document.getElementById("rotating-text");
 
             function updateHeroContent() {
+                if (slides.length <= 1) return;
                 const prevSlide = currentSlide;
                 currentSlide = (currentSlide + 1) % slides.length;
                 currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
@@ -2006,6 +2010,13 @@
                 }
 
                 slides[currentSlide].classList.add("active");
+
+                // Lazy load the incoming slide image
+                const img = slides[currentSlide].querySelector('img');
+                if (img && img.hasAttribute('data-src')) {
+                    img.setAttribute('src', img.getAttribute('data-src'));
+                    img.removeAttribute('data-src');
+                }
 
                 if (rotatingText) {
                     rotatingText.classList.remove("opacity-100");
@@ -2021,7 +2032,11 @@
                     slides[prevSlide].classList.remove("prev");
                 }, 1500);
             }
-            setInterval(updateHeroContent, slideInterval);
+            
+            // Start slider if there are slides
+            if(slides.length > 1) {
+                setInterval(updateHeroContent, slideInterval);
+            }
 
             // --- Navbar Scroll Logic ---
             const navbar = document.getElementById("navbar");
@@ -2243,14 +2258,6 @@
             const playerId = "player-" + Math.random().toString(36).substr(2, 9);
             vidWrapper.innerHTML = `<iframe id="${playerId}" width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full object-cover"></iframe>`;
         };
-
-        // --- Image Lazy Loader ---
-        window.addEventListener("load", function () {
-            document.querySelectorAll(".hero-slide img[data-src]").forEach(img => {
-                img.setAttribute("src", img.getAttribute("data-src"));
-                img.removeAttribute("data-src");
-            });
-        });
 
         // --- Arrow Scroller ---
         window.scrollSlider = function (sliderId, amount) {

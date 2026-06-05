@@ -345,27 +345,9 @@
     </section>
 
     <!-- =========================================================================
-         LAUNCHING SOON MESSAGE (VISIBLE NOW)
+         TOUR GRID AND CONTENT
     ========================================================================== -->
-    <main id="launching-soon-section" class="py-16 md:py-24 bg-white text-center px-4 relative z-10 border-b border-gray-100">
-        <div class="max-w-3xl mx-auto bg-purple-50 border border-purple-100 rounded-3xl p-8 md:p-12 shadow-sm">
-            <i class="fas fa-car-side text-4xl text-elder-primary mb-4"></i>
-            <h2 class="text-2xl md:text-3xl text-elder-black font-bold mb-4 leading-relaxed" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-                Relaxing short escapes and refreshing weekend experiences are coming soon.
-            </h2>
-            <p class="text-gray-600 mb-8 text-[15px] md:text-base">Leave your details to get early access when we go live.</p>
-            <button onclick="openGeneralWaitlistModal(event)" class="bg-elder-primary hover:bg-elder-secondary text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-md transform hover:-translate-y-1">
-                Join Waiting List
-            </button>
-        </div>
-    </main>
-
-    <!-- =========================================================================
-         HIDDEN SECTIONS START (UNCOMMENT WHEN LAUNCHING)
-         Ensure this block starts with exactly one '< ! - -' and ends with exactly one '- - >'
-    ========================================================================== -->
-    <!--
-    <main class="py-6 md:py-8 bg-white">
+    <main class="py-6 md:py-8 bg-white border-b border-gray-100">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
             
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-8 gap-4">
@@ -387,26 +369,60 @@
 
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 
-                <div data-price="999998" data-date="2026-04-11" data-duration="0" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="#" loading="lazy" alt="Lonavala Resort Stay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
+                <!-- Card 1: Coorg (Sold Out) -->
+                <a href="coorg.html" data-price="14999" data-date="2026-05-01" data-duration="3" data-status="sold-out" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden grayscale-[0.2]">
+                        <img src="assets/weekend-getaways/coorg/coorg-mandalpatti-view-point.webp" loading="lazy" alt="Relaxing Coorg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-car"></i> April 2026
+                            <i class="fas fa-car"></i> May 2026
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Sold Out
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow opacity-80">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Coorg</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            Escape to the coffee estates. Crisp air, lazy mornings, and gentle walks.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> Estate Resort</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-mug-hot text-elder-primary"></i> Coffee Tour</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
+                                ₹14,999 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 text-gray-600 text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
+                                Sold Out
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2: Hampi (Launching Soon) -->
+                <div data-price="999998" data-date="2026-07-01" data-duration="0" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                        <img src="assets/tours/hampi.webp" loading="lazy" alt="Hampi Heritage Retreat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-car"></i> July 2026
                         </div>
                         <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
                             Launching Soon
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Lonavala Resort Stay</h3>
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Hampi</h3>
                         <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            A quick, refreshing break in the Sahyadris. Perfect for a restful weekend.
+                            Step back in time to the Vijayanagara empire. Comfortable walks and captivating history.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> 4-Star Resort</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> Pure Veg Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-spa"></i> Spa Access</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Heritage Resort</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-monument"></i> Guided Tour</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
@@ -418,37 +434,6 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="coorg.html" data-price="15000" data-date="2026-03-14" data-duration="3" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="#" loading="lazy" alt="Relaxing Coorg" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-car"></i> Next: 14 Mar · 2N/3D
-                        </div>
-                        <div class="absolute top-4 right-4 bg-elder-gold text-elder-black px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Available
-                        </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Relaxing Coorg</h3>
-                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Escape to the coffee estates. Crisp air, lazy mornings, and gentle walks.
-                        </p>
-                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> Estate Resort</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-mug-hot text-elder-primary"></i> Coffee Tour</div>
-                        </div>
-                        <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹15,000 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive)</span>
-                            </div>
-                            <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
-                                View Itinerary
-                            </div>
-                        </div>
-                    </div>
-                </a>
 
             </div>
         </div>
@@ -566,7 +551,11 @@
         </div>
     </section>
 
-    <!- Section 4: Top Weekend Destinations (Reverted to Overlay Design) ->
+    <!-- =========================================================================
+         HIDDEN SECTIONS (Refreshing Escapes, Editorial, Bento, FAQs)
+         Uncomment to make them visible again
+    ========================================================================== -->
+    <!--
     <section class="py-10 md:py-12 bg-gray-50 relative border-t border-gray-100 overflow-hidden">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
             <div class="text-center mb-8 md:mb-10">
@@ -579,7 +568,6 @@
 
             <div class="flex md:grid flex-nowrap md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0">
                 
-                <!- Card 1 ->
                 <div class="group relative h-[300px] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer w-[80vw] sm:w-[50vw] md:w-auto flex-none snap-center md:snap-align-none border border-gray-100">
                     <img src="assets/weekend-getaways/coorg/coorg-abbey-falls.webp" alt="Coorg" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1200" height="1200">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 transition-opacity"></div>
@@ -590,7 +578,6 @@
                     </div>
                 </div>
 
-                <!- Card 2 ->
                 <div class="group relative h-[300px] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer w-[80vw] sm:w-[50vw] md:w-auto flex-none snap-center md:snap-align-none border border-gray-100">
                     <img src="assets/weekend-getaways/coorg/coorg-golden-statues.webp" alt="Lonavala" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="750" height="400">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 transition-opacity"></div>
@@ -601,7 +588,6 @@
                     </div>
                 </div>
 
-                <!- Card 3 ->
                 <div class="group relative h-[300px] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer w-[80vw] sm:w-[50vw] md:w-auto flex-none snap-center md:snap-align-none border border-gray-100">
                     <img src="assets/weekend-getaways/coorg/coorg-mandalpatti-view-point.webp" alt="Munnar" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="1133">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 transition-opacity"></div>
@@ -612,7 +598,6 @@
                     </div>
                 </div>
 
-                <!- Card 4 ->
                 <div class="group relative h-[300px] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer w-[80vw] sm:w-[50vw] md:w-auto flex-none snap-center md:snap-align-none border border-gray-100">
                     <img src="assets/weekend-getaways/coorg/coorg-mathigodu-elephant-camp.webp" alt="Ooty" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="720" height="540">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 transition-opacity"></div>
@@ -626,7 +611,6 @@
         </div>
     </section>
 
-    <!- Editorial Compact Block ->
     <section class="py-10 md:py-12 bg-[#F8F9FB] relative overflow-hidden border-t border-gray-100">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
             <div class="max-w-4xl mx-auto text-center mb-8">
@@ -650,7 +634,6 @@
         </div>
     </section>
 
-    <!- Section 5: Relaxation Guaranteed (Compact Bento Layout) ->
     <section class="py-10 md:py-12 bg-white relative overflow-hidden border-t border-gray-100">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
             <div class="text-center mb-8">
@@ -662,7 +645,6 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 items-stretch">
-                <!- Feature 1 ->
                 <div class="bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-md hover:border-blue-200">
                     <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 shadow-sm shrink-0">
                         <i class="fas fa-car-side"></i>
@@ -673,7 +655,6 @@
                     </p>
                 </div>
 
-                <!- Feature 2 ->
                 <div class="bg-gradient-to-br from-green-50/50 to-white border border-green-100 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-md hover:border-green-200">
                     <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 shadow-sm shrink-0">
                         <i class="fas fa-hotel"></i>
@@ -684,7 +665,6 @@
                     </p>
                 </div>
 
-                <!- Feature 3 ->
                 <div class="bg-gradient-to-br from-purple-50/50 to-white border border-purple-100 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-md hover:border-purple-200">
                     <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-fuchsia-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 shadow-sm shrink-0">
                         <i class="fas fa-mug-hot"></i>
@@ -695,7 +675,6 @@
                     </p>
                 </div>
 
-                <!- Feature 4 ->
                 <div class="bg-gradient-to-br from-orange-50/50 to-white border border-orange-100 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-md hover:border-orange-200">
                     <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 text-white rounded-xl flex items-center justify-center text-xl mb-4 shadow-sm shrink-0">
                         <i class="fas fa-user-shield"></i>
@@ -709,7 +688,6 @@
         </div>
     </section>
 
-    <!- Section 6: FAQs (Expanded answers & added questions) ->
     <section class="py-16 bg-gray-50 relative border-t border-gray-100 overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
             <div class="text-center mb-10 md:mb-12">
@@ -787,7 +765,8 @@
             </div>
         </div>
     </section>
-
+    -->
+    
     <section class="py-8 md:py-10 bg-[#110B29] relative overflow-hidden border-b border-gray-900">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
             <h2 class="text-2xl md:text-3xl font-serif font-bold text-white mb-3">Want a custom weekend getaway?</h2>
@@ -804,8 +783,6 @@
             </div>
         </div>
     </section>
-    -->
-    <!-- HIDDEN SECTIONS END HERE -->
 
     <!-- Section 9: Footer -->
     <footer id="contact" class="bg-[#0a0a0a] text-gray-300 pt-12 pb-10 border-t border-gray-800 z-10 relative">
