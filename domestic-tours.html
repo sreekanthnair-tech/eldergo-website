@@ -355,64 +355,61 @@
             <!-- Section 5: Tour Cards Grid -->
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-                <!-- Card 1: Ladakh (Available) -->
-                <a href="domestic-tours/leh-ladakh.html" data-price="90000" data-date="2026-07-01" data-duration="7" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/ladakh.webp" loading="lazy" alt="Ladakh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                <!-- Card 1: Leh Ladakh (Sold Out — 2026 season complete, kept for social proof) -->
+                <div data-price="63000" data-date="2026-07-29" data-duration="8" data-status="sold-out" class="w-full bg-gray-50 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden grayscale-[0.2]">
+                        <img src="assets/tours/ladakh.webp" loading="lazy" alt="Leh Ladakh" class="w-full h-full object-cover" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i>29 July 2026
-                        </div>
-                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Seats Available
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Sold Out
                         </div>
                     </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                    <div class="p-5 md:p-6 flex flex-col flex-grow opacity-80">
                         <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Leh Ladakh</h3>
                         <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
                             A breathtaking journey through the Land of High Passes, safely paced for acclimatization.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i>4-Star Hotels</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i>All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-mountain"></i> Slow Paced</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> 4-Star Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-mountain text-elder-primary"></i> Slow Paced</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹63,000 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-500 flex items-baseline gap-2">
+                                ₹63,000 <span class="text-[14px] font-medium text-gray-400 tracking-wide">(all-inclusive + Flights Extra)</span>
                             </div>
-                            <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
-                                View Tour
+                            <div class="w-full bg-gray-200 text-gray-500 text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center shadow-sm cursor-not-allowed">
+                                Sold Out
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <!-- Card 2: Kerala (Launching Soon) -->
-                <div data-price="999998" data-date="2026-08-01" data-duration="0" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <!-- Card: Andaman (Launching Soon) -->
+                <div data-price="999998" data-date="2026-10-01" data-duration="6" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/kerala.webp" loading="lazy" alt="God's Own Country Kerala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
+                        <img src="assets/tours/andaman.webp" loading="lazy" alt="Radhanagar Beach, Havelock — Andaman senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-train"></i> August 2026
+                            <i class="fas fa-map-marker-alt"></i> Oct &amp; Dec 2026
                         </div>
                         <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
                             Launching Soon
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Kerala</h3>
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Andaman</h3>
                         <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Experience backwaters, tea gardens, and rich culture in God's Own Country.
+                            Turquoise waters, gentle beaches, and island calm at an easy pace.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> 4-Star Resorts</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Stays</div>
                             <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-ship"></i> Houseboat</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-umbrella-beach"></i> Island Tours</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBA <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -421,68 +418,68 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Kashmir (Sold Out) -->
-                <div data-price="35000" data-date="2026-06-01" data-duration="6" data-status="sold-out" class="w-full bg-gray-50 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden grayscale-[0.2]">
-                        <img src="assets/tours/kashmir.webp" loading="lazy" alt="Paradise in Kashmir" class="w-full h-full object-cover">
+                <!-- Card: Meghalaya (Launching Soon) -->
+                <div data-price="999998" data-date="2027-01-01" data-duration="5" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                        <img src="assets/tours/meghalaya.webp" loading="lazy" alt="Meghalaya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> June 2026
+                            <i class="fas fa-map-marker-alt"></i> Jan &amp; Feb 2027
                         </div>
-                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Sold Out
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
                         </div>
                     </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow opacity-80">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Kashmir</h3>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Meghalaya</h3>
                         <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Experience the pristine beauty of Dal Lake, Gulmarg, and Pahalgam in a relaxed, safe pace.
+                            The Abode of Clouds — accessible waterfalls, clean villages, living roots.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> 4-Star Stays</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-ship text-elder-primary"></i> Shikara Ride</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Stays</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-cloud"></i> Scenic Views</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-gray-500 flex items-baseline gap-2">
-                                ₹35,000 <span class="text-[14px] font-medium text-gray-400 tracking-wide">(all-inclusive)</span>
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
-                            <div class="w-full bg-gray-200 text-gray-500 text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-not-allowed">
-                                Sold Out
-                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4: Meghalaya (Sold Out) -->
-                <div data-price="28000" data-date="2026-05-01" data-duration="5" data-status="sold-out" class="w-full bg-gray-50 rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden grayscale-[0.2]">
-                        <img src="assets/tours/meghalaya.webp" loading="lazy" alt="Magical Meghalaya" class="w-full h-full object-cover">
+                <!-- Card: Rajasthan (Launching Soon) -->
+                <div data-price="999998" data-date="2027-01-15" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                        <img src="assets/tours/rajasthan.webp" loading="lazy" alt="Amber Fort, Jaipur — Rajasthan senior heritage tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> May 2026
+                            <i class="fas fa-map-marker-alt"></i> Jan &amp; Feb 2027
                         </div>
-                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Sold Out
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
                         </div>
                     </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow opacity-80">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Meghalaya</h3>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Rajasthan</h3>
                         <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Discover the Abode of Clouds with easily accessible waterfalls, clean villages, and living roots.
+                            Royal palaces, desert forts, and timeless heritage, comfortably paced.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> Premium Stays</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-cloud text-elder-primary"></i> Scenic Views</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Heritage Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-gray-500 flex items-baseline gap-2">
-                                ₹28,000 <span class="text-[14px] font-medium text-gray-400 tracking-wide">(all-inclusive)</span>
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
-                            <div class="w-full bg-gray-200 text-gray-500 text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-not-allowed">
-                                Sold Out
-                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -800,8 +797,8 @@
                             <div class="flex flex-wrap gap-2">
                                 <span onclick="fillSearch('Bali')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-purple-50 text-elder-primary border border-purple-100 rounded-full text-sm md:text-[16px] font-medium hover:bg-elder-primary hover:text-white transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bali</span>
                                 <span onclick="fillSearch('Bhutan')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bhutan</span>
-                                <span onclick="fillSearch('Malaysia')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Malaysia</span>
-                                <span onclick="fillSearch('Mauritius')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Mauritius</span>
+                                <span onclick="fillSearch('Sri Lanka')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Sri Lanka</span> <span onclick="fillSearch('Thailand')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Thailand</span>
+                                <span onclick="fillSearch('Andaman')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Andaman</span> <span onclick="fillSearch('Meghalaya')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Meghalaya</span>
                             </div>
                         </div>
                     </div>
@@ -817,10 +814,21 @@
     <!-- ============================================================== -->
     <script>
         const searchData = [
-            {title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour"},
-            {title: "Malaysia", url: "international-tours.html", subtitle: "International Tour"},
-            {title: "Mauritius", url: "international-tours.html", subtitle: "International Tour"},
-            {title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour"}
+            { title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour" },
+            { title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour" },
+            { title: "Sri Lanka", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Thailand", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Vietnam", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Singapore + Malaysia", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "China", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Leh Ladakh", url: "domestic-tours/leh-ladakh.html", subtitle: "Domestic Tour" },
+            { title: "Andaman", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Meghalaya", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Rajasthan", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Coorg", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
+            { title: "Hampi", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
+            { title: "Divine Kashi & Prayagraj", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" },
+            { title: "Sacred Rameshwaram & Madurai", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" }
         ];
 
         document.addEventListener("DOMContentLoaded", () => {

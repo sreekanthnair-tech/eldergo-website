@@ -116,7 +116,13 @@
             "@type": "TouristTrip",
             "name": "Bali Senior Citizen Tour Package",
             "description": "Beautiful temples, serene beaches, and vibrant culture tailored for elderly travelers.",
-            "tourType": "Senior Citizen Group Tour"
+            "tourType": "Senior Citizen Group Tour",
+            "offers": {
+              "@type": "Offer",
+              "price": "89000",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            }
           }
         },
         {
@@ -124,9 +130,15 @@
           "position": 2,
           "item": {
             "@type": "TouristTrip",
-            "name": "Malaysia Senior Group Holiday",
-            "description": "Vibrant cities, lush rainforests, and diverse cultures for seniors.",
-            "tourType": "Senior Citizen Group Tour"
+            "name": "Bhutan Senior Citizen Tour Package",
+            "description": "Monasteries, mountains, and the happiest country on earth, at a gentle senior-friendly pace.",
+            "tourType": "Senior Citizen Group Tour",
+            "offers": {
+              "@type": "Offer",
+              "price": "99700",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            }
           }
         },
         {
@@ -134,8 +146,8 @@
           "position": 3,
           "item": {
             "@type": "TouristTrip",
-            "name": "Mauritius Senior Travel",
-            "description": "Crystal clear waters, pristine sands, and tropical bliss for senior citizens.",
+            "name": "Sri Lanka Senior Citizen Tour Package",
+            "description": "Ancient temples, emerald tea trails, and golden beaches for senior travellers.",
             "tourType": "Senior Citizen Group Tour"
           }
         },
@@ -144,8 +156,38 @@
           "position": 4,
           "item": {
             "@type": "TouristTrip",
-            "name": "Bhutan Senior Tour Package",
-            "description": "Monasteries, mountains, and the happiest country on earth.",
+            "name": "Thailand Senior Citizen Tour Package",
+            "description": "Grand palaces, gentle island escapes, and warm hospitality for seniors.",
+            "tourType": "Senior Citizen Group Tour"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Vietnam Senior Citizen Tour Package",
+            "description": "Emerald bays, timeless old towns, and rich flavours at an easy pace.",
+            "tourType": "Senior Citizen Group Tour"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Singapore + Malaysia Senior Citizen Tour Package",
+            "description": "Garden-city dazzle and Malaysian charm in one easy senior-friendly trip.",
+            "tourType": "Senior Citizen Group Tour"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "China Senior Citizen Tour Package",
+            "description": "The Great Wall, imperial wonders, and modern marvels for senior travellers.",
             "tourType": "Senior Citizen Group Tour"
           }
         }
@@ -367,17 +409,17 @@
 
             <!-- Section 5: Tour Cards Grid -->
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                
-                <!-- Card 1: Bali (Available) -->
-                <a href="international-tours/bali.html" data-price="90000" data-date="2026-07-01" data-duration="7" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
+
+                <!-- Card: Bali (Available) -->
+                <a href="international-tours/bali.html" data-price="89000" data-date="2026-09-22" data-duration="7" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/bali.webp" loading="lazy" alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                    <img src="assets/tours/bali.webp" loading="lazy" alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 1 July 2026
+                            <i class="fas fa-plane"></i> 22 Sep 2026
                         </div>
                         <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Seats Available
+                            3 of 22 seats left
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
@@ -393,7 +435,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹90,000 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
+                                ₹89,000 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -402,84 +444,16 @@
                     </div>
                 </a>
 
-                <!-- Card 2: Malaysia (Launching Soon) -->
-                <div data-price="999998" data-date="2026-07-15" data-duration="5" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <!-- Card: Bhutan (Available) -->
+                <a href="international-tours/bhutan.html" data-price="99700" data-date="2026-11-10" data-duration="8" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/malaysia.webp" loading="lazy" alt="Malaysia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1280" height="720">
+                    <img src="assets/tours/bhutan.webp" loading="lazy" alt="Bhutan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 15 July 2026
+                            <i class="fas fa-plane"></i> 10 Nov 2026
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Launching Soon
-                        </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Malaysia</h3>
-                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Vibrant cities, lush rainforests, and diverse cultures.
-                        </p>
-                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
-                        </div>
-                        <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBA <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
-                            </div>
-                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
-                                Join Waiting List
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Mauritius (Launching Soon) -->
-                <div data-price="999999" data-date="2026-08-10" data-duration="6" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/mauritius.webp" loading="lazy" alt="Mauritius" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
-                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 10 Aug 2026
-                        </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Launching Soon
-                        </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex flex-col flex-grow">
-                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Mauritius</h3>
-                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
-                            Crystal clear waters, pristine sands, and tropical bliss.
-                        </p>
-                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Resorts</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
-                        </div>
-                        <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBA <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
-                            </div>
-                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
-                                Join Waiting List
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Bhutan (Sold Out) -->
-                <a href="international-tours/bhutan.html" data-price="99700" data-date="2026-05-07" data-duration="6" data-status="sold-out" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
-                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
-                        <img src="assets/tours/bhutan.webp" loading="lazy" alt="Bhutan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1536" height="920">
-                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 7 May 2026
-                        </div>
-                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
-                            Sold Out
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            19 of 22 seats left
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
@@ -495,7 +469,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹99,700 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive)</span>
+                                ₹99,700 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -503,6 +477,176 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- Card: Sri Lanka (Launching Soon) -->
+                <div data-price="999998" data-date="2026-11-01" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                    <img src="assets/tours/srilanka.webp" loading="lazy" alt="Sri Lanka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-plane"></i> Nov &amp; Dec 2026
+                        </div>
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Sri Lanka</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            Ancient temples, emerald tea trails, and golden beaches.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Thailand (Launching Soon) -->
+                <div data-price="999998" data-date="2026-12-01" data-duration="6" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                    <img src="assets/tours/thailand.webp" loading="lazy" alt="Grand Palace, Bangkok — Thailand senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-plane"></i> Dec 2026
+                        </div>
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Thailand</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            Grand palaces, gentle island escapes, and warm hospitality.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Vietnam (Launching Soon) -->
+                <div data-price="999998" data-date="2027-02-01" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                    <img src="assets/hero/vietnam.webp" loading="lazy" alt="Vietnam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-plane"></i> Feb &amp; Mar 2027
+                        </div>
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Vietnam</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            Emerald bays, timeless old towns, and rich flavours.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Singapore + Malaysia (Launching Soon) -->
+                <div data-price="999998" data-date="2027-02-15" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                    <img src="assets/tours/malaysia.webp" loading="lazy" alt="Singapore + Malaysia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-plane"></i> Feb &amp; Mar 2027
+                        </div>
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">Singapore + Malaysia</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            Garden-city dazzle and Malaysian charm in one easy trip.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: China (Launching Soon) -->
+                <div data-price="999998" data-date="2027-03-01" data-duration="8" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
+                    <img src="assets/tours/china.webp" loading="lazy" alt="Great Wall of China — China senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
+                        <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
+                            <i class="fas fa-plane"></i> Mar 2027
+                        </div>
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                            Launching Soon
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex flex-col flex-grow">
+                        <h3 class="text-[26px] md:text-[28px] font-serif font-bold text-elder-black mb-2 leading-tight">China</h3>
+                        <p class="italic text-gray-600 text-[16px] md:text-[17px] mb-4 line-clamp-2 leading-relaxed font-serif">
+                            The Great Wall, imperial wonders, and modern marvels.
+                        </p>
+                        <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Hotels</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-map-marked-alt"></i> Sightseeing</div>
+                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-user-shield"></i> Tour Manager</div>
+                        </div>
+                        <div class="mt-auto flex flex-col gap-4 pt-2">
+                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
+                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            </div>
+                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                                Join Waiting List
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -789,8 +933,8 @@
                             <div class="flex flex-wrap gap-2">
                                 <span onclick="fillSearch('Bali')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-purple-50 text-elder-primary border border-purple-100 rounded-full text-sm md:text-[16px] font-medium hover:bg-elder-primary hover:text-white transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bali</span>
                                 <span onclick="fillSearch('Bhutan')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Bhutan</span>
-                                <span onclick="fillSearch('Malaysia')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Malaysia</span>
-                                <span onclick="fillSearch('Mauritius')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Mauritius</span>
+                                <span onclick="fillSearch('Sri Lanka')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Sri Lanka</span> <span onclick="fillSearch('Thailand')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Thailand</span>
+                                <span onclick="fillSearch('Andaman')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Andaman</span> <span onclick="fillSearch('Meghalaya')" class="px-3.5 md:px-4 py-1.5 md:py-2 bg-gray-50 border border-gray-200 rounded-full text-sm md:text-[16px] text-gray-700 hover:border-elder-primary hover:text-elder-primary hover:bg-purple-50 transition-colors cursor-pointer shadow-sm min-h-[40px] flex items-center">Meghalaya</span>
                             </div>
                         </div>
                     </div>
@@ -806,10 +950,21 @@
     <!-- ============================================================== -->
     <script>
         const searchData = [
-            {title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour"},
-            {title: "Malaysia", url: "international-tours.html", subtitle: "International Tour"},
-            {title: "Mauritius", url: "international-tours.html", subtitle: "International Tour"},
-            {title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour"}
+            { title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour" },
+            { title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour" },
+            { title: "Sri Lanka", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Thailand", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Vietnam", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Singapore + Malaysia", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "China", url: "international-tours.html", subtitle: "International Tour" },
+            { title: "Leh Ladakh", url: "domestic-tours/leh-ladakh.html", subtitle: "Domestic Tour" },
+            { title: "Andaman", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Meghalaya", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Rajasthan", url: "domestic-tours.html", subtitle: "Domestic Tour" },
+            { title: "Coorg", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
+            { title: "Hampi", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
+            { title: "Divine Kashi & Prayagraj", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" },
+            { title: "Sacred Rameshwaram & Madurai", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" }
         ];
 
         document.addEventListener("DOMContentLoaded", () => {
