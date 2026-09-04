@@ -135,7 +135,7 @@
             "tourType": "Senior Citizen Group Tour",
             "offers": {
               "@type": "Offer",
-              "price": "99700",
+              "price": "72000",
               "priceCurrency": "INR",
               "availability": "https://schema.org/InStock"
             }
@@ -411,14 +411,14 @@
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- Card: Bali (Available) -->
-                <a href="international-tours/bali.html" data-price="89000" data-date="2026-09-22" data-duration="7" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
+                <a href="international-tours/bali.html" data-price="89000" data-date="2026-09-22" data-duration="7" data-status="available" data-tour="bali" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/bali.webp" loading="lazy" alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 22 Sep 2026
+                            <i class="fas fa-plane"></i> <span data-field="date">22 Sep 2026</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             3 of 22 seats left
                         </div>
                     </div>
@@ -435,7 +435,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹89,000 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
+                                <span data-field="price">₹89,000</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -445,14 +445,14 @@
                 </a>
 
                 <!-- Card: Bhutan (Available) -->
-                <a href="international-tours/bhutan.html" data-price="99700" data-date="2026-11-10" data-duration="8" data-status="available" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
+                <a href="international-tours/bhutan.html" data-price="72000" data-date="2026-11-16" data-duration="8" data-status="available" data-tour="bhutan" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/bhutan.webp" loading="lazy" alt="Bhutan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> 10 Nov 2026
+                            <i class="fas fa-plane"></i> <span data-field="date">16 Nov 2026</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             19 of 22 seats left
                         </div>
                     </div>
@@ -469,7 +469,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                ₹99,700 <span class="text-[14px] font-medium text-gray-500 tracking-wide">(all-inclusive + Flights Extra)</span>
+                                <span data-field="price">₹72,000</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(land-only + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -479,14 +479,14 @@
                 </a>
 
                 <!-- Card: Sri Lanka (Launching Soon) -->
-                <div data-price="999998" data-date="2026-11-01" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2026-11-01" data-duration="7" data-status="launching-soon" data-tour="srilanka" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/srilanka.webp" loading="lazy" alt="Sri Lanka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> Nov &amp; Dec 2026
+                            <i class="fas fa-plane"></i> <span data-field="date">Nov &amp; Dec 2026</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -503,7 +503,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -513,14 +513,14 @@
                 </div>
 
                 <!-- Card: Thailand (Launching Soon) -->
-                <div data-price="999998" data-date="2026-12-01" data-duration="6" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2026-12-01" data-duration="6" data-status="launching-soon" data-tour="thailand" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/thailand.webp" loading="lazy" alt="Grand Palace, Bangkok — Thailand senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> Dec 2026
+                            <i class="fas fa-plane"></i> <span data-field="date">Dec 2026</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -537,7 +537,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -547,14 +547,14 @@
                 </div>
 
                 <!-- Card: Vietnam (Launching Soon) -->
-                <div data-price="999998" data-date="2027-02-01" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2027-02-01" data-duration="7" data-status="launching-soon" data-tour="vietnam" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/vietnam.webp" loading="lazy" alt="Vietnam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> Feb &amp; Mar 2027
+                            <i class="fas fa-plane"></i> <span data-field="date">Feb &amp; Mar 2027</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -571,7 +571,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -581,14 +581,14 @@
                 </div>
 
                 <!-- Card: Singapore + Malaysia (Launching Soon) -->
-                <div data-price="999998" data-date="2027-02-15" data-duration="7" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2027-02-15" data-duration="7" data-status="launching-soon" data-tour="singapore-malaysia" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/malaysia.webp" loading="lazy" alt="Singapore + Malaysia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> Feb &amp; Mar 2027
+                            <i class="fas fa-plane"></i> <span data-field="date">Feb &amp; Mar 2027</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -605,7 +605,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -615,14 +615,14 @@
                 </div>
 
                 <!-- Card: China (Launching Soon) -->
-                <div data-price="999998" data-date="2027-03-01" data-duration="8" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2027-03-01" data-duration="8" data-status="launching-soon" data-tour="china" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                     <img src="assets/tours/china.webp" loading="lazy" alt="Great Wall of China — China senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> Mar 2027
+                            <i class="fas fa-plane"></i> <span data-field="date">Mar 2027</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -639,7 +639,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -1156,5 +1156,42 @@
         
     </script>
     <script src="/js/search.js" defer></script>
+    <!-- =============================================================== -->
+    <!-- SINGLE SOURCE OF TRUTH for tour cards on this page.              -->
+    <!-- >>> THIS IS THE ONE PLACE TO EDIT TOUR DATES, PRICES & STATUSES. -->
+    <!-- On load it writes each card's visible text AND its hidden data-* -->
+    <!-- attributes from here, so the two can never drift apart. The HTML -->
+    <!-- cards below keep matching content so the page also works JS-off. -->
+    <!-- =============================================================== -->
+    <script>
+    (function(){
+      const TOUR_DATA = {
+        "bali":               { status:"available",      dateISO:"2026-09-22", priceSort:"89000",  date:"22 Sep 2026",    price:"\u20B989,000",  badgeText:"3 of 22 seats left",  badge:"green" },
+        "bhutan":             { status:"available",      dateISO:"2026-11-16", priceSort:"72000",  date:"16 Nov 2026",    price:"\u20B972,000",  badgeText:"19 of 22 seats left", badge:"green" },
+        "srilanka":           { status:"launching-soon", dateISO:"2026-11-01", priceSort:"999998", date:"Nov & Dec 2026", price:"Price TBD",       badgeText:"Launching Soon",      badge:"amber" },
+        "thailand":           { status:"launching-soon", dateISO:"2026-12-01", priceSort:"999998", date:"Dec 2026",       price:"Price TBD",       badgeText:"Launching Soon",      badge:"amber" },
+        "vietnam":            { status:"launching-soon", dateISO:"2027-02-01", priceSort:"999998", date:"Feb & Mar 2027", price:"Price TBD",       badgeText:"Launching Soon",      badge:"amber" },
+        "singapore-malaysia": { status:"launching-soon", dateISO:"2027-02-15", priceSort:"999998", date:"Feb & Mar 2027", price:"Price TBD",       badgeText:"Launching Soon",      badge:"amber" },
+        "china":              { status:"launching-soon", dateISO:"2027-03-01", priceSort:"999998", date:"Mar 2027",       price:"Price TBD",       badgeText:"Launching Soon",      badge:"amber" }
+      };
+      // Badge colours use classes verified present in this page's compiled CSS (no blank badges).
+      const BADGE_BASE = "absolute top-4 right-4 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide";
+      const BADGE_COLOUR = { green:"bg-emerald-500", amber:"bg-amber-500", red:"bg-red-600" };
+      function apply(){
+        document.querySelectorAll('[data-tour]').forEach(function(card){
+          const t = TOUR_DATA[card.getAttribute('data-tour')]; if(!t) return;
+          card.setAttribute('data-status', t.status);
+          card.setAttribute('data-date',   t.dateISO);
+          card.setAttribute('data-price',  t.priceSort);
+          const d=card.querySelector('[data-field="date"]');   if(d && t.date!=null)  d.textContent=t.date;
+          const p=card.querySelector('[data-field="price"]');  if(p && t.price!=null) p.textContent=t.price;
+          const s=card.querySelector('[data-field="status"]');
+          if(s){ if(t.badgeText!=null) s.textContent=t.badgeText;
+                 if(t.badge && BADGE_COLOUR[t.badge]) s.className=BADGE_BASE+" "+BADGE_COLOUR[t.badge]; }
+        });
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+    })();
+    </script>
 </body>
 </html>

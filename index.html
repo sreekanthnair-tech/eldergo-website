@@ -608,15 +608,15 @@
                     id="tours-slider">
 
                     <!-- Card 1: Bali (Live) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="bali" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/bali.webp" loading="lazy" decoding="async" alt="Bali" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-emerald-600/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-emerald-600/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 3 of 22 seats left
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> 22 Sep 2026
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">22 Sep 2026</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -630,7 +630,7 @@
                                     <div class="text-right flex flex-col items-end shrink-0">
                                         <span class="text-[9px] md:text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1 leading-none">Starts From</span>
                                         <div class="flex items-baseline gap-1">
-                                            <span class="text-xl md:text-[22px] font-black text-elder-primary leading-none tracking-tight">₹89,000</span>
+                                            <span class="text-xl md:text-[22px] font-black text-elder-primary leading-none tracking-tight" data-field="price">₹89,000</span>
                                             <span class="text-[10px] md:text-[11px] text-gray-500 font-semibold">/person</span>
                                         </div>
                                     </div>
@@ -641,15 +641,15 @@
                     </div>
 
                     <!-- Card 2: Bhutan (Live) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="bhutan" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/bhutan.webp" loading="lazy" decoding="async" alt="Bhutan" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-emerald-600/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-emerald-600/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 19 of 22 seats left
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> 10 Nov 2026
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">16 Nov 2026</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -663,7 +663,7 @@
                                     <div class="text-right flex flex-col items-end shrink-0">
                                         <span class="text-[9px] md:text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1 leading-none">Starts From</span>
                                         <div class="flex items-baseline gap-1">
-                                            <span class="text-xl md:text-[22px] font-black text-elder-primary leading-none tracking-tight">₹99,700</span>
+                                            <span class="text-xl md:text-[22px] font-black text-elder-primary leading-none tracking-tight" data-field="price">₹72,000</span>
                                             <span class="text-[10px] md:text-[11px] text-gray-500 font-semibold">/person</span>
                                         </div>
                                     </div>
@@ -674,15 +674,15 @@
                     </div>
 
                     <!-- Card 3: Andaman (Launching Soon) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="andaman" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/andaman.webp" loading="lazy" decoding="async" alt="Andaman" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 Launching Soon
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> Oct &amp; Dec 2026
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">Oct &amp; Dec 2026</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -700,15 +700,15 @@
                     </div>
 
                     <!-- Card 4: Sri Lanka (Launching Soon) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="srilanka" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/srilanka.webp" loading="lazy" decoding="async" alt="Sri Lanka" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 Launching Soon
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> Nov &amp; Dec 2026
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">Nov &amp; Dec 2026</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -726,15 +726,15 @@
                     </div>
 
                     <!-- Card 5: Thailand (Launching Soon) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="thailand" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/thailand.webp" loading="lazy" decoding="async" alt="Thailand" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 Launching Soon
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> Dec 2026
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">Dec 2026</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -752,15 +752,15 @@
                     </div>
 
                     <!-- Card 6: Meghalaya (Launching Soon) -->
-                    <div class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
+                    <div data-tour="meghalaya" class="group relative w-[85vw] sm:w-[350px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 snap-center shrink-0 border border-gray-100 flex flex-col">
                         <div class="relative h-[220px] md:h-[250px] w-full shrink-0 overflow-hidden">
                             <img src="assets/tours/meghalaya.webp" loading="lazy" decoding="async" alt="Meghalaya" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1920" height="960">
                             <div class="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0"></div>
-                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase">
+                            <div class="absolute top-4 left-4 bg-amber-500/90 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase" data-field="status">
                                 Launching Soon
                             </div>
                             <div class="absolute top-4 right-4 bg-white/95 text-black tracking-wide text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                                <i class="far fa-calendar-alt text-elder-primary"></i> Jan &amp; Feb 2027
+                                <i class="far fa-calendar-alt text-elder-primary"></i> <span data-field="date">Jan &amp; Feb 2027</span>
                             </div>
                         </div>
                         <div class="p-5 md:p-6 flex flex-col grow justify-between relative z-30">
@@ -2206,6 +2206,41 @@
         
     </script>
     <script src="/js/search.js" defer></script>
+    <!-- =============================================================== -->
+    <!-- SINGLE SOURCE OF TRUTH for the homepage tour slider.             -->
+    <!-- >>> THIS IS THE ONE PLACE TO EDIT TOUR DATES, PRICES & STATUSES. -->
+    <!-- On load it writes each card's visible text from here. The HTML   -->
+    <!-- cards keep matching content so the page also works with JS off.  -->
+    <!-- Keep these in step with the listing pages (no contradictions).   -->
+    <!-- =============================================================== -->
+    <script>
+    (function(){
+      const TOUR_DATA = {
+        "bali":      { status:"available",      dateISO:"2026-09-22", priceSort:"89000",  date:"22 Sep 2026",    price:"\u20B989,000", badgeText:"3 of 22 seats left",  badge:"green" },
+        "bhutan":    { status:"available",      dateISO:"2026-11-16", priceSort:"72000",  date:"16 Nov 2026",    price:"\u20B972,000", badgeText:"19 of 22 seats left", badge:"green" },
+        "andaman":   { status:"launching-soon", dateISO:"2026-10-01", priceSort:"999998", date:"Oct & Dec 2026", price:null,             badgeText:"Launching Soon",     badge:"amber" },
+        "srilanka":  { status:"launching-soon", dateISO:"2026-11-01", priceSort:"999998", date:"Nov & Dec 2026", price:null,             badgeText:"Launching Soon",     badge:"amber" },
+        "thailand":  { status:"launching-soon", dateISO:"2026-12-01", priceSort:"999998", date:"Dec 2026",       price:null,             badgeText:"Launching Soon",     badge:"amber" },
+        "meghalaya": { status:"launching-soon", dateISO:"2027-01-01", priceSort:"999998", date:"Jan & Feb 2027", price:null,             badgeText:"Launching Soon",     badge:"amber" }
+      };
+      const BADGE_BASE = "absolute top-4 left-4 text-white tracking-widest text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-20 uppercase";
+      const BADGE_COLOUR = { green:"bg-emerald-600/90", amber:"bg-amber-500/90", red:"bg-red-600/90" };
+      function apply(){
+        document.querySelectorAll('[data-tour]').forEach(function(card){
+          const t = TOUR_DATA[card.getAttribute('data-tour')]; if(!t) return;
+          if(t.status)    card.setAttribute('data-status', t.status);
+          if(t.dateISO)   card.setAttribute('data-date',   t.dateISO);
+          if(t.priceSort) card.setAttribute('data-price',  t.priceSort);
+          const d=card.querySelector('[data-field="date"]');   if(d && t.date!=null)  d.textContent=t.date;
+          const p=card.querySelector('[data-field="price"]');  if(p && t.price!=null) p.textContent=t.price;
+          const s=card.querySelector('[data-field="status"]');
+          if(s){ if(t.badgeText!=null) s.textContent=t.badgeText;
+                 if(t.badge && BADGE_COLOUR[t.badge]) s.className=BADGE_BASE+" "+BADGE_COLOUR[t.badge]; }
+        });
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+    })();
+    </script>
 </body>
 
 </html>

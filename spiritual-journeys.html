@@ -388,11 +388,11 @@
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- Card 1: Divine Kashi & Prayagraj (Launching Soon) -->
-                <div data-price="999998" data-date="2026-11-01" data-duration="0" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2026-11-01" data-duration="0" data-status="launching-soon" data-tour="kashi" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/tours/kashi.webp" loading="lazy" alt="Ganga Aarti at Kashi Vishwanath, Varanasi — spiritual senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -408,7 +408,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -418,11 +418,11 @@
                 </div>
 
                 <!-- Card 2: Sacred Rameshwaram & Madurai (Launching Soon — rebuilt to waitlist pattern) -->
-                <div data-price="999998" data-date="2026-12-01" data-duration="4" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2026-12-01" data-duration="4" data-status="launching-soon" data-tour="rameshwaram" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/tours/rameshwaram.webp" loading="lazy" alt="Ramanathaswamy Temple corridor, Rameshwaram — spiritual senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -438,7 +438,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -1131,5 +1131,36 @@
         
     </script>
     <script src="/js/search.js" defer></script>
+    <!-- =============================================================== -->
+    <!-- SINGLE SOURCE OF TRUTH for tour cards on this page.              -->
+    <!-- >>> THIS IS THE ONE PLACE TO EDIT TOUR DATES, PRICES & STATUSES. -->
+    <!-- On load it writes each card's visible text AND its hidden data-* -->
+    <!-- attributes from here, so the two can never drift apart. The HTML -->
+    <!-- cards below keep matching content so the page also works JS-off. -->
+    <!-- =============================================================== -->
+    <script>
+    (function(){
+      const TOUR_DATA = {
+        "kashi":       { status:"launching-soon", dateISO:"2026-11-01", priceSort:"999998", date:null, price:"Price TBD", badgeText:"Launching Soon", badge:"amber" },
+        "rameshwaram": { status:"launching-soon", dateISO:"2026-12-01", priceSort:"999998", date:null, price:"Price TBD", badgeText:"Launching Soon", badge:"amber" }
+      };
+      const BADGE_BASE = "absolute top-4 right-4 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide";
+      const BADGE_COLOUR = { green:"bg-emerald-500", amber:"bg-amber-500", red:"bg-red-500" };
+      function apply(){
+        document.querySelectorAll('[data-tour]').forEach(function(card){
+          const t = TOUR_DATA[card.getAttribute('data-tour')]; if(!t) return;
+          if(t.status)    card.setAttribute('data-status', t.status);
+          if(t.dateISO)   card.setAttribute('data-date',   t.dateISO);
+          if(t.priceSort) card.setAttribute('data-price',  t.priceSort);
+          const d=card.querySelector('[data-field="date"]');   if(d && t.date!=null)  d.textContent=t.date;
+          const p=card.querySelector('[data-field="price"]');  if(p && t.price!=null) p.textContent=t.price;
+          const s=card.querySelector('[data-field="status"]');
+          if(s){ if(t.badgeText!=null) s.textContent=t.badgeText;
+                 if(t.badge && BADGE_COLOUR[t.badge]) s.className=BADGE_BASE+" "+BADGE_COLOUR[t.badge]; }
+        });
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+    })();
+    </script>
 </body>
 </html>

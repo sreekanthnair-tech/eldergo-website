@@ -370,11 +370,11 @@
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- Card 1: Coorg (Launching Soon) -->
-                <div data-price="999998" data-date="2027-01-01" data-duration="3" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2027-01-01" data-duration="3" data-status="launching-soon" data-tour="coorg" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/weekend-getaways/coorg/coorg-mandalpatti-view-point.webp" loading="lazy" alt="Coorg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -390,7 +390,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -400,11 +400,11 @@
                 </div>
 
                 <!-- Card 2: Hampi (Launching Soon) -->
-                <div data-price="999998" data-date="2027-02-01" data-duration="3" data-status="launching-soon" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <div data-price="999998" data-date="2027-02-01" data-duration="3" data-status="launching-soon" data-tour="hampi" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/tours/hampi.webp" loading="lazy" alt="Hampi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
                             Launching Soon
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                Price TBD <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
                             </div>
                             <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                                 Join Waiting List
@@ -1188,5 +1188,36 @@
         
     </script>
     <script src="/js/search.js" defer></script>
+    <!-- =============================================================== -->
+    <!-- SINGLE SOURCE OF TRUTH for tour cards on this page.              -->
+    <!-- >>> THIS IS THE ONE PLACE TO EDIT TOUR DATES, PRICES & STATUSES. -->
+    <!-- On load it writes each card's visible text AND its hidden data-* -->
+    <!-- attributes from here, so the two can never drift apart. The HTML -->
+    <!-- cards below keep matching content so the page also works JS-off. -->
+    <!-- =============================================================== -->
+    <script>
+    (function(){
+      const TOUR_DATA = {
+        "coorg": { status:"launching-soon", dateISO:"2027-01-01", priceSort:"999998", date:null, price:"Price TBD", badgeText:"Launching Soon", badge:"amber" },
+        "hampi": { status:"launching-soon", dateISO:"2027-02-01", priceSort:"999998", date:null, price:"Price TBD", badgeText:"Launching Soon", badge:"amber" }
+      };
+      const BADGE_BASE = "absolute top-4 right-4 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide";
+      const BADGE_COLOUR = { green:"bg-emerald-500", amber:"bg-amber-500", red:"bg-red-500" };
+      function apply(){
+        document.querySelectorAll('[data-tour]').forEach(function(card){
+          const t = TOUR_DATA[card.getAttribute('data-tour')]; if(!t) return;
+          if(t.status)    card.setAttribute('data-status', t.status);
+          if(t.dateISO)   card.setAttribute('data-date',   t.dateISO);
+          if(t.priceSort) card.setAttribute('data-price',  t.priceSort);
+          const d=card.querySelector('[data-field="date"]');   if(d && t.date!=null)  d.textContent=t.date;
+          const p=card.querySelector('[data-field="price"]');  if(p && t.price!=null) p.textContent=t.price;
+          const s=card.querySelector('[data-field="status"]');
+          if(s){ if(t.badgeText!=null) s.textContent=t.badgeText;
+                 if(t.badge && BADGE_COLOUR[t.badge]) s.className=BADGE_BASE+" "+BADGE_COLOUR[t.badge]; }
+        });
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+    })();
+    </script>
 </body>
 </html>
