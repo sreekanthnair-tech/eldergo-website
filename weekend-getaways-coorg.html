@@ -1216,100 +1216,9 @@
         }
 
         // Search Functionality Data (Synced to Global)
-        const searchData = [
-            { title: "Bali", url: "international-tours/bali.html", subtitle: "International Tour" },
-            { title: "Bhutan", url: "international-tours/bhutan.html", subtitle: "International Tour" },
-            { title: "Sri Lanka", url: "international-tours.html", subtitle: "International Tour" },
-            { title: "Thailand", url: "international-tours.html", subtitle: "International Tour" },
-            { title: "Vietnam", url: "international-tours.html", subtitle: "International Tour" },
-            { title: "Singapore + Malaysia", url: "international-tours.html", subtitle: "International Tour" },
-            { title: "China", url: "international-tours.html", subtitle: "International Tour" },
-            { title: "Leh Ladakh", url: "domestic-tours/leh-ladakh.html", subtitle: "Domestic Tour" },
-            { title: "Andaman", url: "domestic-tours.html", subtitle: "Domestic Tour" },
-            { title: "Meghalaya", url: "domestic-tours.html", subtitle: "Domestic Tour" },
-            { title: "Rajasthan", url: "domestic-tours.html", subtitle: "Domestic Tour" },
-            { title: "Coorg", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
-            { title: "Hampi", url: "weekend-getaways.html", subtitle: "Weekend Getaway" },
-            { title: "Divine Kashi & Prayagraj", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" },
-            { title: "Sacred Rameshwaram & Madurai", url: "spiritual-journeys.html", subtitle: "Spiritual Journey" }
-        ];
-
-        const searchModal = document.getElementById('search-modal');
-        const searchInput = document.getElementById('search-input');
-        const searchRecommendations = document.getElementById('search-recommendations');
-        const searchResults = document.getElementById('search-results');
-        const clearSearchBtn = document.getElementById('clear-search-btn');
-
-        window.toggleSearchModal = function() {
-            searchModal.classList.toggle('open');
-            searchModal.classList.toggle('invisible');
-            if(!searchModal.classList.contains('invisible')) {
-                clearSearch();
-                setTimeout(() => searchInput.focus(), 100);
-            }
-        }
-
-        window.clearSearch = function() {
-            searchInput.value = '';
-            searchRecommendations.classList.remove('hidden');
-            searchResults.classList.add('hidden');
-            clearSearchBtn.classList.add('hidden');
-            searchResults.innerHTML = '';
-            searchInput.focus();
-        };
-
-        window.fillSearch = function(term) {
-            searchInput.value = term;
-            handleSearchInput(term);
-        };
-
-        function handleSearchInput(query) {
-            const q = query.toLowerCase().trim();
-
-            if (q.length === 0) {
-                searchRecommendations.classList.remove('hidden');
-                searchResults.classList.add('hidden');
-                clearSearchBtn.classList.add('hidden');
-                searchResults.innerHTML = '';
-                return;
-            }
-
-            clearSearchBtn.classList.remove('hidden');
-            searchRecommendations.classList.add('hidden');
-            searchResults.classList.remove('hidden');
-
-            const filtered = searchData.filter(item => item.title.toLowerCase().includes(q));
-
-            if (filtered.length > 0) {
-                let html = '<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden w-full max-w-3xl mr-auto">';
-                filtered.forEach(item => {
-                    html += `
-                        <a href="${item.url}" class="flex items-center gap-4 p-4 hover:bg-purple-50 transition-colors border-b border-gray-50 last:border-0 group">
-                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-elder-primary transition-colors">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="flex-1 text-left">
-                                <h4 class="text-[16px] md:text-lg font-bold text-gray-900 group-hover:text-elder-primary transition-colors">${item.title}</h4>
-                                <p class="text-[12px] md:text-sm text-gray-500">${item.subtitle}</p>
-                            </div>
-                            <i class="fas fa-chevron-right ml-auto text-gray-300 group-hover:text-elder-primary transition-colors text-sm"></i>
-                        </a>
-                    `;
-                });
-                html += '</div>';
-                searchResults.innerHTML = html;
-            } else {
-                searchResults.innerHTML = `
-                    <div class="text-center py-10 w-full max-w-3xl mr-auto bg-white rounded-2xl border border-gray-100">
-                        <i class="fas fa-search text-4xl text-gray-200 mb-3"></i>
-                        <h4 class="text-lg font-bold text-gray-900 mb-1">No tours found</h4>
-                        <p class="text-gray-500">We couldn't find any tours matching "${query}"</p>
-                    </div>
-                `;
-            }
-        }
         
-        searchInput.addEventListener('input', (e) => handleSearchInput(e.target.value));
+
+        
 
         document.addEventListener('DOMContentLoaded', () => {
             if (typeof lucide !== 'undefined') {
@@ -1383,6 +1292,6 @@
             setMinSurpriseDate();
         });
     </script>
-<script src="js/search.js" defer></script>
+<script src="/js/search.js" defer></script>
 </body>
 </html>
