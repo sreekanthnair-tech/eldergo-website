@@ -21,7 +21,7 @@
         { title: 'Singapore + Malaysia',         url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, city, gardens, culture' },
         { title: 'China',                        url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, great wall, history, heritage' },
         { title: 'Leh Ladakh',                   url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, mountains, himalayas, monasteries, nature' },
-        { title: 'Andaman',                      url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, beach, islands, sea, tropical', trending: true },
+        { title: 'Andaman',                      url: '/domestic-tours/andaman.html',       subtitle: 'Domestic Tour',     keywords: 'india, beach, islands, sea, tropical, port blair, havelock, cellular jail, radhanagar, scuba', trending: true },
         { title: 'Meghalaya',                    url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, hills, waterfalls, nature, northeast', trending: true },
         { title: 'Rajasthan',                    url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, desert, forts, palaces, heritage' },
         { title: 'Coorg',                        url: '/weekend-getaways.html',             subtitle: 'Weekend Getaway',   keywords: 'india, coffee, hills, nature, karnataka' },

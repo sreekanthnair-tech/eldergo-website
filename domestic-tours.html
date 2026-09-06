@@ -382,16 +382,16 @@
                     </div>
                 </div>
 
-                <!-- Card: Andaman (Launching Soon) -->
-                <div data-price="999998" data-date="2026-10-01" data-duration="6" data-status="launching-soon" data-tour="andaman" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
+                <!-- Card: Andaman (Available) -->
+                <a href="domestic-tours/andaman.html" data-price="72000" data-date="2026-10-28" data-duration="6" data-status="available" data-tour="andaman" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/tours/andaman.webp" loading="lazy" alt="Radhanagar Beach, Havelock — Andaman senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-map-marker-alt"></i> <span data-field="date">Oct &amp; Dec 2026</span>
+                            <i class="fas fa-plane"></i> <span data-field="date">28 Oct 2026</span>
                         </div>
-                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
-                            Launching Soon
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
+                            Seats Available
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
@@ -400,20 +400,21 @@
                             Turquoise waters, gentle beaches, and island calm at an easy pace.
                         </p>
                         <div class="flex items-center flex-wrap gap-x-4 gap-y-2 mb-5">
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-hotel"></i> Premium Stays</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-utensils"></i> All Meals</div>
-                            <div class="flex items-center gap-2 text-gray-500 text-[14px] font-medium"><i class="fas fa-umbrella-beach"></i> Island Tours</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-hotel text-elder-primary"></i> 4-Star Stays</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-utensils text-elder-primary"></i> All Meals</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-umbrella-beach text-elder-primary"></i> Island Tours</div>
+                            <div class="flex items-center gap-2 text-gray-700 text-[14px] font-medium"><i class="fas fa-user-shield text-elder-primary"></i> Tour Manager</div>
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
-                            <div class="text-[24px] md:text-[26px] font-bold text-gray-400 flex items-baseline gap-2">
-                                <span data-field="price">Price TBD</span> <span class="text-[14px] font-medium text-gray-400 tracking-wide">(Price To Be Announced)</span>
+                            <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
+                                <span data-field="price">₹72,000</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(Land package + Flights Extra)</span>
                             </div>
-                            <button onclick="openWaitlistModal(this); event.preventDefault();" class="w-full bg-elder-primary hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
-                                Join Waiting List
-                            </button>
+                            <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
+                                View Tour
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Card: Meghalaya (Launching Soon) -->
                 <div data-price="999998" data-date="2027-01-01" data-duration="5" data-status="launching-soon" data-tour="meghalaya" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-xl transition-shadow duration-300">
@@ -1043,7 +1044,7 @@
     (function(){
       const TOUR_DATA = {
         "ladakh":    { status:"sold-out",      dateISO:"2026-07-29", priceSort:"0",      date:null,                price:null,       badgeText:"Sold Out",       badge:"red" },
-        "andaman":   { status:"launching-soon", dateISO:"2026-10-01", priceSort:"999998", date:"Oct & Dec 2026",   price:"Price TBD", badgeText:"Launching Soon", badge:"amber" },
+        "andaman":   { status:"available",       dateISO:"2026-10-28", priceSort:"72000",  date:"28 Oct 2026",       price:"\u20B972,000", badgeText:"Seats Available", badge:"green" },
         "meghalaya": { status:"launching-soon", dateISO:"2027-01-01", priceSort:"999998", date:"Jan & Feb 2027",   price:"Price TBD", badgeText:"Launching Soon", badge:"amber" },
         "rajasthan": { status:"launching-soon", dateISO:"2027-01-15", priceSort:"999998", date:"Jan & Feb 2027",   price:"Price TBD", badgeText:"Launching Soon", badge:"amber" }
       };
