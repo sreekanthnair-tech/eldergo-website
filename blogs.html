@@ -412,11 +412,10 @@
             <p class="text-base md:text-lg opacity-90 mb-6 md:mb-8 max-w-lg mx-auto leading-relaxed">Get our weekly travel inspiration and exclusive tips for seniors delivered straight to your inbox. No spam, just joy.</p>
             
             <!-- ============================================== -->
-            <!-- FORMSPREE INTEGRATION FOR NEWSLETTER           -->
+            <!-- NEW LEAD SYSTEM (Supabase -> TeleCRM) — NEWSLETTER -->
+            <!-- Pilot migration: this form ONLY. The other 4 forms stay on Formspree. -->
             <!-- ============================================== -->
-            <form id="newsletter-form" action="https://formspree.io/f/xvzydnvn" method="POST" class="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mx-auto">
-                <!-- Hidden Subject line for the email you receive -->
-                <input type="hidden" name="_subject" value="New Newsletter Subscription from ElderGo Blog!">
+            <form id="newsletter-form" action="https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake" method="POST" class="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mx-auto">
                 
                 <!-- Email Input (Required by Formspree to be 'email' or '_replyto') -->
                 <input type="email" name="email" placeholder="Enter your email address" class="flex-grow px-5 py-3.5 md:px-6 md:py-4 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm md:text-base shadow-inner" required>
@@ -727,13 +726,15 @@
             if (blogCards.length > 0) updatePagination();
 
             // ==============================================
-            // FORMSPREE AJAX SUBMISSION LOGIC (NEWSLETTER)
+            // NEW LEAD SYSTEM (Supabase -> TeleCRM) — NEWSLETTER ONLY
+            // Pilot migration. The other 4 forms remain on Formspree via the shared .ajax-form handler (untouched).
             // ==============================================
+            const NEWSLETTER_ENDPOINT = "https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake";
             const newsletterForm = document.getElementById("newsletter-form");
             if (newsletterForm) {
                 newsletterForm.addEventListener("submit", function(e) {
                     e.preventDefault();
-                    
+
                     const submitBtn = this.querySelector('button[type="submit"]');
                     const originalBtnText = submitBtn.innerHTML;
                     const messageBox = document.getElementById("newsletter-message");
@@ -743,13 +744,18 @@
                     submitBtn.disabled = true;
                     messageBox.classList.add("hidden");
 
-                    // Fetch Request to Formspree
-                    fetch(this.action, {
+                    // Build JSON payload from the form fields + form_type
+                    const payload = Object.fromEntries(new FormData(this).entries());
+                    payload.form_type = "newsletter";
+
+                    // POST JSON to the new lead endpoint (Supabase -> TeleCRM)
+                    fetch(NEWSLETTER_ENDPOINT, {
                         method: "POST",
-                        body: new FormData(this),
                         headers: {
-                            'Accept': 'application/json' // Prevents redirect
-                        }
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify(payload)
                     })
                     .then(response => {
                         if (response.ok) {
@@ -757,18 +763,12 @@
                             messageBox.classList.remove("hidden");
                             messageBox.className = "text-sm mt-3 font-bold text-green-300";
                             messageBox.innerHTML = "<i class='fas fa-check-circle'></i> Thanks for subscribing!";
-                            this.reset(); // Clear the form
+                            this.reset();
                         } else {
-                            // ERROR returned by Formspree
-                            response.json().then(data => {
-                                messageBox.classList.remove("hidden");
-                                messageBox.className = "text-sm mt-3 font-bold text-red-300";
-                                if (Object.hasOwn(data, 'errors')) {
-                                    messageBox.textContent = data["errors"].map(error => error["message"]).join(", ");
-                                } else {
-                                    messageBox.textContent = "Oops! There was a problem.";
-                                }
-                            });
+                            // ERROR from the endpoint
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "text-sm mt-3 font-bold text-red-300";
+                            messageBox.textContent = "Oops! There was a problem. Please try again.";
                         }
                     })
                     .catch(error => {
