@@ -831,16 +831,16 @@
             <p class="text-gray-600 mb-6 text-[15px] leading-relaxed">Our designers are currently designing this experience. It should be ready in a couple of weeks, so we will reach you on a priority basis when it's ready!</p>
             
             <!-- Dynamic Waitlist Form -->
-            <form action="https://formspree.io/f/mnjrlyke" method="POST" class="ajax-form space-y-4">
+            <form action="https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake" method="POST" class="waitlist-form space-y-4">
                 <input type="hidden" name="form_type" value="waitlist">
+                <input type="text" name="company_website" style="display:none" tabindex="-1" autocomplete="off">
                 <!-- Dynamically assigned -->
                 <input type="hidden" name="destination" id="waitlist-destination" value="">
-                <input type="hidden" name="_subject" id="waitlist-subject" value="New Waitlist Request">
                 
                 <input type="text" name="name" placeholder="Your Name *" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
                 <input type="tel" name="phone" placeholder="Mobile Number *" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
                 <input type="text" name="city" placeholder="Your City *" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
-                <input type="email" name="_replyto" placeholder="Email ID (Optional)" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
+                <input type="email" name="email" placeholder="Email ID (Optional)" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
                 
                 <button type="submit" class="w-full bg-elder-primary text-white font-bold py-4 text-[16px] rounded-lg uppercase tracking-widest hover:bg-elder-secondary shadow-md mt-2">Join List</button>
                 <p class="form-message hidden text-center text-sm mt-2 font-bold"></p>
@@ -1067,6 +1067,57 @@
             // ==============================================
             // FORMSPREE AJAX SUBMISSION LOGIC (ALL FORMS)
             // ==============================================
+            // ==============================================
+            // NEW LEAD SYSTEM (Supabase -> TeleCRM) — TOUR WAITLIST ONLY
+            // Migrated off Formspree. The shared .ajax-form handler below still serves the other Formspree forms (e.g. general enquiry).
+            // ==============================================
+            const WAITLIST_ENDPOINT = "https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake";
+            document.querySelectorAll(".waitlist-form").forEach(form => {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    const messageBox = this.querySelector(".form-message");
+
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+                    submitBtn.disabled = true;
+                    messageBox.classList.add("hidden");
+
+                    const payload = Object.fromEntries(new FormData(this).entries());
+                    payload.form_type = "waitlist";
+                    if (!("company_website" in payload)) payload.company_website = "";
+
+                    fetch(WAITLIST_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(r => r.json().catch(() => ({ ok: r.ok })))
+                    .then(data => {
+                        if (data && data.ok) {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-green-600 font-bold";
+                            messageBox.textContent = "Thank you! You've been added to the waitlist.";
+                            this.reset();
+                            setTimeout(closeWaitlistModal, 3000);
+                        } else {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                            messageBox.textContent = "Oops! Something went wrong. Please try again.";
+                        }
+                    })
+                    .catch(() => {
+                        messageBox.classList.remove("hidden");
+                        messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                        messageBox.textContent = "Connection error. Please try again.";
+                    })
+                    .finally(() => {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            });
+
             document.querySelectorAll(".ajax-form").forEach(form => {
                 form.addEventListener("submit", function(e) {
                     e.preventDefault();
