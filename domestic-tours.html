@@ -729,9 +729,9 @@
             <p class="text-gray-600 mb-8 text-[15px]">Our senior travel experts will call you shortly.</p>
             
             <!-- Formspree General Enquiry Form -->
-            <form action="https://formspree.io/f/mnjrlyke" method="POST" class="ajax-form space-y-4">
+            <form action="https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake" method="POST" class="enquiry-form space-y-4">
                 <input type="hidden" name="form_type" value="general_enquiry">
-                <input type="hidden" name="_subject" value="New General Enquiry Request">
+                <input type="text" name="company_website" style="display:none" tabindex="-1" autocomplete="off">
                 
                 <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
                 <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3.5 text-[16px] outline-none focus:border-elder-primary text-black">
@@ -1002,6 +1002,58 @@
                             messageBox.textContent = "Thank you! You've been added to the waitlist.";
                             this.reset();
                             setTimeout(closeWaitlistModal, 3000);
+                        } else {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                            messageBox.textContent = "Oops! Something went wrong. Please try again.";
+                        }
+                    })
+                    .catch(() => {
+                        messageBox.classList.remove("hidden");
+                        messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                        messageBox.textContent = "Connection error. Please try again.";
+                    })
+                    .finally(() => {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            });
+
+            // ==============================================
+            // NEW LEAD SYSTEM (Supabase -> TeleCRM) — GENERAL ENQUIRY ONLY
+            // Own handler; the shared .ajax-form handler below no longer serves any form on this page.
+            // ==============================================
+            const ENQUIRY_ENDPOINT = "https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake";
+            document.querySelectorAll(".enquiry-form").forEach(form => {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    const messageBox = this.querySelector(".form-message");
+
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+                    submitBtn.disabled = true;
+                    messageBox.classList.add("hidden");
+
+                    const payload = Object.fromEntries(new FormData(this).entries());
+                    payload.form_type = "general_enquiry";
+                    if (!("company_website" in payload)) payload.company_website = "";
+                    if (!("email" in payload)) payload.email = "";
+
+                    fetch(ENQUIRY_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(r => r.json().catch(() => ({ ok: r.ok })))
+                    .then(data => {
+                        if (data && data.ok) {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-green-600 font-bold";
+                            messageBox.textContent = "Thank you! We've received your request.";
+                            this.reset();
+                            setTimeout(() => { if (this.closest('#enquire-modal')) toggleModal(); }, 3000);
                         } else {
                             messageBox.classList.remove("hidden");
                             messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
