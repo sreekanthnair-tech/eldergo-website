@@ -568,6 +568,13 @@
                     const originalBtnText = submitBtn.innerHTML;
                     const messageBox = this.querySelector(".form-message");
 
+                    function ccErr(t){ messageBox.classList.remove("hidden"); messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold"; messageBox.textContent = t; }
+                    var _nm=(this.full_name.value||'').trim(), _ph=(this.phone.value||'').trim(), _em=(this.email.value||'').trim();
+                    if(!_nm){ ccErr("Please enter your name."); this.full_name.focus(); return; }
+                    var _pd=_ph.replace(/[^0-9]/g,'');
+                    if(/[A-Za-z]/.test(_ph) || _pd.length<10 || _pd.length>13){ ccErr("Please enter a valid phone number (digits only)."); this.phone.focus(); return; }
+                    if(_em && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(_em)){ ccErr("Please enter a valid email address, or leave it blank."); this.email.focus(); return; }
+
                     submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
                     submitBtn.disabled = true;
                     messageBox.classList.add("hidden");

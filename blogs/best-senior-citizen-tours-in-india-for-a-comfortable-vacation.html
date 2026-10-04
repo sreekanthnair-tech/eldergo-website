@@ -795,7 +795,7 @@
       .egq-submit:hover{background:#635CA8;}
       .egq-submit:disabled{opacity:.7;cursor:default;}
       .egq-hp{display:none !important;}
-      .egq-msg{text-align:center;font-size:14px;font-weight:700;margin-top:12px;}
+      .egq-msg{text-align:center;font-size:15px;font-weight:700;margin-top:12px;line-height:1.4;}
       @media (max-width:480px){ .egq-card{padding:20px;border-radius:16px;} .egq-title{font-size:24px;} }
     </style>
     <script>
@@ -814,7 +814,7 @@
       window.closeEnquireModal=function(){ var o=document.getElementById('egq-overlay'); if(!o) return; o.classList.remove('egq-open'); document.body.style.overflow=''; };
       function wire(){
         document.querySelectorAll('a, button').forEach(function(el){
-          if(/^enquire now$/i.test((el.textContent||'').trim())){
+          if(/^enquire now$/i.test((el.textContent||'').replace(/\s+/g,' ').trim())){
             el.removeAttribute('onclick');
             el.addEventListener('click',function(e){ e.preventDefault(); openEnquireModal(); });
           }
@@ -826,8 +826,13 @@
         var f=document.getElementById('egq-form');
         if(f) f.addEventListener('submit',function(e){
           e.preventDefault();
-          if(!f.full_name.value.trim()||!f.phone.value.trim()){ f.reportValidity&&f.reportValidity(); return; }
           var btn=f.querySelector('.egq-submit'); var orig=btn.innerHTML; var msg=f.querySelector('.egq-msg');
+          function egqErr(t){ msg.style.display='block'; msg.style.color='#dc2626'; msg.textContent=t; }
+          var nameV=f.full_name.value.trim(), phoneV=f.phone.value.trim(), emailV=f.email.value.trim();
+          if(!nameV){ egqErr('Please enter your name.'); f.full_name.focus(); return; }
+          var phoneDigits=phoneV.replace(/[^0-9]/g,'');
+          if(/[A-Za-z]/.test(phoneV) || phoneDigits.length<10 || phoneDigits.length>13){ egqErr('Please enter a valid phone number (digits only).'); f.phone.focus(); return; }
+          if(emailV && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailV)){ egqErr('Please enter a valid email address, or leave it blank.'); f.email.focus(); return; }
           btn.innerHTML='Sending...'; btn.disabled=true; msg.style.display='none';
           var d=Object.fromEntries(new FormData(f).entries());
           var userReq=(d.requirements||'').trim();
