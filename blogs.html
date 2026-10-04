@@ -845,11 +845,11 @@
     <script>
     (function(){
       function ctx(){
-        var file=(location.pathname.split('/').pop()||'').toLowerCase();
-        var tours={'bali.html':'Bali','bhutan.html':'Bhutan','andaman.html':'Andaman','leh-ladakh.html':'Leh Ladakh','weekend-getaways-coorg.html':'Coorg','cop-landing-page-coorg.html':'Coorg'};
-        var listings={'domestic-tours.html':'Domestic Tours','international-tours.html':'International Tours','weekend-getaways.html':'Weekend Getaways','spiritual-journeys.html':'Spiritual Journeys'};
-        if(tours[file]) return {label:tours[file],type:'tour'};
-        if(listings[file]) return {label:listings[file],type:'listing'};
+        var seg=(location.pathname.split('/').pop()||'').toLowerCase().replace(/\.html?$/,'');
+        var tours={'bali':'Bali','bhutan':'Bhutan','andaman':'Andaman','leh-ladakh':'Leh Ladakh','weekend-getaways-coorg':'Coorg','cop-landing-page-coorg':'Coorg'};
+        var listings={'domestic-tours':'Domestic Tours','international-tours':'International Tours','weekend-getaways':'Weekend Getaways','spiritual-journeys':'Spiritual Journeys'};
+        if(tours[seg]) return {label:tours[seg],type:'tour'};
+        if(listings[seg]) return {label:listings[seg],type:'listing'};
         return {label:'General',type:'general'};
       }
       var C=ctx();
@@ -857,9 +857,10 @@
       window.openEnquireModal=function(){ var o=document.getElementById('egq-overlay'); if(!o) return; setHeading(); o.classList.add('egq-open'); document.body.style.overflow='hidden'; };
       window.closeEnquireModal=function(){ var o=document.getElementById('egq-overlay'); if(!o) return; o.classList.remove('egq-open'); document.body.style.overflow=''; };
       function wire(){
-        document.querySelectorAll('a').forEach(function(a){
-          if(/^enquire now$/i.test((a.textContent||'').trim())){
-            a.addEventListener('click',function(e){ e.preventDefault(); openEnquireModal(); });
+        document.querySelectorAll('a, button').forEach(function(el){
+          if(/^enquire now$/i.test((el.textContent||'').trim())){
+            el.removeAttribute('onclick');
+            el.addEventListener('click',function(e){ e.preventDefault(); openEnquireModal(); });
           }
         });
         var o=document.getElementById('egq-overlay');
