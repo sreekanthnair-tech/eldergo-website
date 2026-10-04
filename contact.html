@@ -310,13 +310,13 @@
                     </div>
 
                     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] shadow-md border border-gray-100 relative z-10">
-                        <form action="https://formspree.io/f/xwvzajqe" method="POST" class="ajax-form space-y-4 md:space-y-5">
-                            <input type="hidden" name="_subject" value="New Callback Request from ElderGo Website!">
+                        <form action="https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake" method="POST" class="contact-form space-y-4 md:space-y-5">
+                            <input type="text" name="company_website" style="display:none" tabindex="-1" autocomplete="off">
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
                                 <div>
                                     <label class="block text-[10px] md:text-xs font-bold uppercase text-gray-500 mb-1.5 tracking-wide">Full Name *</label>
-                                    <input type="text" name="name" class="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 rounded-t-lg focus:border-elder-primary focus:bg-purple-50 focus:outline-none transition-colors text-sm md:text-base text-gray-900" placeholder="e.g. Rajesh Kumar" required>
+                                    <input type="text" name="full_name" class="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 rounded-t-lg focus:border-elder-primary focus:bg-purple-50 focus:outline-none transition-colors text-sm md:text-base text-gray-900" placeholder="e.g. Rajesh Kumar" required>
                                 </div>
                                 <div>
                                     <label class="block text-[10px] md:text-xs font-bold uppercase text-gray-500 mb-1.5 tracking-wide">Phone Number *</label>
@@ -336,7 +336,7 @@
                                 </div>
                                 <div>
                                     <label class="block text-[10px] md:text-xs font-bold uppercase text-gray-500 mb-1.5 tracking-wide">Email <span class="text-gray-400 font-normal lowercase tracking-normal">(Optional)</span></label>
-                                    <input type="email" name="_replyto" class="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 rounded-t-lg focus:border-elder-primary focus:bg-purple-50 focus:outline-none transition-colors text-sm md:text-base text-gray-900" placeholder="rajesh@example.com">
+                                    <input type="email" name="email" class="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 rounded-t-lg focus:border-elder-primary focus:bg-purple-50 focus:outline-none transition-colors text-sm md:text-base text-gray-900" placeholder="rajesh@example.com">
                                 </div>
                             </div>
 
@@ -556,6 +556,57 @@
             // ==============================================
             // FORMSPREE AJAX SUBMISSION LOGIC
             // ==============================================
+            // ==============================================
+            // NEW LEAD SYSTEM (Supabase -> TeleCRM) — CONTACT / CALLBACK ONLY
+            // Own handler; the shared .ajax-form handler below is left intact for any other Formspree forms.
+            // ==============================================
+            const CONTACT_ENDPOINT = "https://mennzivtgtvtnuomsbma.supabase.co/functions/v1/web-lead-intake";
+            document.querySelectorAll(".contact-form").forEach(form => {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    const messageBox = this.querySelector(".form-message");
+
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+                    submitBtn.disabled = true;
+                    messageBox.classList.add("hidden");
+
+                    const payload = Object.fromEntries(new FormData(this).entries());
+                    payload.form_type = "contact_callback";
+                    payload.source_page = window.location.href;
+                    ["full_name","phone","best_time","email","requirements","company_website"].forEach(k => { if (!(k in payload)) payload[k] = ""; });
+
+                    fetch(CONTACT_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(r => r.json().catch(() => ({ ok: r.ok })))
+                    .then(data => {
+                        if (data && data.ok) {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-green-600 font-bold";
+                            messageBox.textContent = "Thank you! We've received your request.";
+                            this.reset();
+                        } else {
+                            messageBox.classList.remove("hidden");
+                            messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                            messageBox.textContent = "Oops! There was a problem. Please try again.";
+                        }
+                    })
+                    .catch(() => {
+                        messageBox.classList.remove("hidden");
+                        messageBox.className = "form-message text-center text-sm mt-3 text-red-600 font-bold";
+                        messageBox.textContent = "Connection error. Please try again.";
+                    })
+                    .finally(() => {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            });
+
             document.querySelectorAll(".ajax-form").forEach(form => {
                 form.addEventListener("submit", function(e) {
                     e.preventDefault();
