@@ -13,7 +13,7 @@
     // 1. CENTRALIZED DATA — update your tours ONLY here.
     //    URLs are ROOT-RELATIVE (leading "/") so they resolve the same from any page depth.
     const mySearchData = [
-        { title: 'Bali',                         url: '/international-tours/bali.html',      subtitle: 'International Tour', keywords: 'asia, beach, temples, tropical, indonesia', trending: true },
+        { title: 'Bali',                         url: '/international-tours.html',           subtitle: 'International Tours', keywords: 'asia, beach, temples, tropical, indonesia', trending: false },
         { title: 'Bhutan',                       url: '/international-tours/bhutan.html',    subtitle: 'International Tour', keywords: 'asia, mountains, monasteries, himalayas, nature', trending: true },
         { title: 'Sri Lanka',                    url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island', trending: true },
         { title: 'Thailand',                     url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, islands, palaces, temples', trending: true },
