@@ -15,7 +15,7 @@
     const mySearchData = [
         { title: 'Bali',                         url: '/international-tours.html',           subtitle: 'International Tours', keywords: 'asia, beach, temples, tropical, indonesia', trending: false },
         { title: 'Bhutan',                       url: '/international-tours/bhutan.html',    subtitle: 'International Tour', keywords: 'asia, mountains, monasteries, himalayas, nature', trending: true },
-        { title: 'Sri Lanka',                    url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island', trending: true },
+        { title: 'Sri Lanka',                    url: '/international-tours/srilanka.html',  subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island, sigiriya, kandy, colombo, nuwara eliya, ramayana', trending: true },
         { title: 'Thailand',                     url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, islands, palaces, temples', trending: true },
         { title: 'Vietnam',                      url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, bay, old town, nature, culture' },
         { title: 'Singapore + Malaysia',         url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, city, gardens, culture' },
