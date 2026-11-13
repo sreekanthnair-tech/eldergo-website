@@ -298,9 +298,23 @@
         #search-modal-container::-webkit-scrollbar { width: 6px; }
         #search-modal-container::-webkit-scrollbar-track { background: transparent; }
         #search-modal-container::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 6px; }
+        /* PHOTO SWITCH (rj-hide-photos on <body>): while licensed Rajasthan photos are pending, hide the
+           "Photo coming soon" day tiles and show a text-only hero. Remove the class from <body> to bring the placeholders back. */
+        body.rj-hide-photos .rj-photo-strip { display: none !important; }
+        body.rj-hide-photos #hero .rj-hero-bg {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(226,166,92,0.45) 0%, rgba(226,166,92,0) 45%),
+                radial-gradient(circle at 10% 90%, rgba(106,72,244,0.55) 0%, rgba(106,72,244,0) 50%),
+                linear-gradient(135deg, #1E1446 0%, #3A2585 55%, #7A4A1F 100%) !important;
+        }
+        @media (max-width: 1023px) {
+            body.rj-hide-photos #hero .rj-hero-media { display: none !important; }
+            body.rj-hide-photos #hero .rj-hero-content { padding-top: 0 !important; }
+            body.rj-hide-photos #hero { background: linear-gradient(180deg, #F3EFFF 0%, #FFFFFF 70%) !important; padding-bottom: 8px; }
+        }
     </style>
 </head>
-<body class="bg-gray-50"> 
+<body class="bg-gray-50 rj-hide-photos"> 
 
     <!-- Header (Fixed White Navbar) -->
     <header id="navbar" class="fixed top-0 left-0 right-0 w-full z-50 pt-[calc(15px+env(safe-area-inset-top))] pb-3 lg:pb-4 border-b border-transparent">
@@ -395,16 +409,16 @@
         <!-- SECTION 1: HERO -->
         <section id="hero" class="relative pt-6 md:pt-0 lg:py-10 min-h-[auto] lg:min-h-[70vh] flex flex-col lg:justify-center bg-white lg:bg-black overflow-hidden">
             <!-- Background Image -->
-            <div class="absolute top-0 left-0 right-0 lg:inset-0 z-0 w-full h-[55vh] lg:h-full shrink-0">
+            <div class="rj-hero-media absolute top-0 left-0 right-0 lg:inset-0 z-0 w-full h-[55vh] lg:h-full shrink-0">
                 <!-- PLACEHOLDER hero: needs licensed image assets/rajasthan/rajasthan-hero.webp (e.g. Amber Fort or Sam Dunes at sunset), then use an <img> like the Sri Lanka page -->
-                <div class="w-full h-full" style="background:linear-gradient(135deg,#C9783A 0%,#E2A65C 45%,#8C4A2F 100%);" role="img" aria-label="Rajasthan"></div>
+                <div class="rj-hero-bg w-full h-full" style="background:linear-gradient(135deg,#C9783A 0%,#E2A65C 45%,#8C4A2F 100%);" role="img" aria-label="Rajasthan"></div>
                 <!-- Desktop dark overlay -->
                 <div class="hidden lg:block absolute inset-0 bg-black/35"></div>
                 <!-- Mobile white gradient overlay at bottom -->
                 <div class="block lg:hidden absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
             </div>
 
-            <div class="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row h-full items-center pt-[28vh] lg:pt-0 pb-2 lg:pb-0">
+            <div class="rj-hero-content max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row h-full items-center pt-[28vh] lg:pt-0 pb-2 lg:pb-0">
 
                 <!-- Left Side: Title & Info -->
                 <div class="w-full lg:w-[55%] flex flex-col justify-center animate-fade-in-up text-center lg:text-left mb-3 lg:mb-0">
@@ -584,7 +598,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day1-gangaur-ghat.webp (Gangaur Ghat, Udaipur) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Gangaur Ghat, Udaipur"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Gangaur Ghat, Udaipur</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day1b-bagore-ki-haveli.webp (Bagore Ki Haveli, Udaipur) -->
@@ -630,7 +644,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day2-city-palace-udaipur.webp (City Palace, Udaipur) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="City Palace, Udaipur"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">City Palace, Udaipur</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day2b-saheliyon-ki-bari.webp (Saheliyon Ki Bari, Udaipur) -->
@@ -676,7 +690,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day3-ranakpur-temple.webp (Ranakpur Jain Temple) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Ranakpur Jain Temple"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Ranakpur Jain Temple</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day3b-ranakpur-pillars.webp (Carved marble pillars, Ranakpur Jain Temple) -->
@@ -722,7 +736,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day4-mehrangarh-fort.webp (Mehrangarh Fort, Jodhpur) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Mehrangarh Fort, Jodhpur"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Mehrangarh Fort, Jodhpur</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day4b-blue-city-view.webp (Blue City view from Mehrangarh Fort, Jodhpur) -->
@@ -768,7 +782,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day5-thar-desert-drive.webp (Thar Desert landscape on the road to Jaisalmer) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Thar Desert landscape on the road to Jaisalmer"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Thar Desert landscape on the road to Jaisalmer</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day5b-sam-dunes-camp.webp (Desert camp near the Sam Sand Dunes, Jaisalmer) -->
@@ -814,7 +828,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day6-jaisalmer-war-museum.webp (Jaisalmer War Museum) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Jaisalmer War Museum"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Jaisalmer War Museum</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day6b-camel-ride-sunset.webp (Sunset camel ride, Sam Sand Dunes) -->
@@ -861,7 +875,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day7-phalodi.webp (Phalodi, Rajasthan) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Phalodi, Rajasthan"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Phalodi, Rajasthan</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day7b-bikaner-old-city.webp (Old city of Bikaner) -->
@@ -907,7 +921,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day8-mandawa-haveli.webp (Painted haveli, Mandawa) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Painted haveli, Mandawa"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Painted haveli, Mandawa</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day8b-mandawa-frescoes.webp (Fresco details on a Mandawa haveli) -->
@@ -953,7 +967,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day9-jal-mahal.webp (Jal Mahal, Jaipur) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="Jal Mahal, Jaipur"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">Jal Mahal, Jaipur</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day9b-amber-fort.webp (Amber Fort, Jaipur) -->
@@ -1001,7 +1015,7 @@
                     </summary>
                     <div class="p-4 pt-0 md:p-5 md:pt-0">
                         <div class="mt-1 border-t border-gray-100 pt-3 md:pt-4">
-                            <div class="flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
+                            <div class="rj-photo-strip flex overflow-x-auto hide-scroll-mobile gap-2 mb-3 snap-x snap-mandatory pb-2">
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day10-city-palace-jaipur.webp (City Palace, Jaipur) -->
                                 <div class="w-[85%] sm:w-64 md:w-72 h-40 md:h-56 rounded-xl shadow-sm shrink-0 snap-start flex flex-col items-center justify-center text-center p-4 gap-1" style="background:linear-gradient(135deg,#F6E7D2 0%,#E9C79B 100%);color:#7A4A1F;" role="img" aria-label="City Palace, Jaipur"><i class="fas fa-camera text-xl"></i><span class="text-sm font-bold">City Palace, Jaipur</span><span class="text-xs">Photo coming soon</span></div>
                                 <!-- PLACEHOLDER photo: needs licensed image assets/rajasthan/rajasthan-day10b-jantar-mantar.webp (Jantar Mantar, Jaipur) -->
