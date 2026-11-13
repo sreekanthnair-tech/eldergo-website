@@ -73,17 +73,7 @@
 
   <!-- Individual Destination Pages -->
   <url>
-    <loc>https://www.eldergo.in/international-tours/bhutan.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.eldergo.in/international-tours/srilanka.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.eldergo.in/domestic-tours/leh-ladakh.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
