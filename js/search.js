@@ -219,3 +219,58 @@
         input.style.borderColor = '';
     }, true);
 })();
+
+/**
+ * ELDERGO MESSAGE-BOX LIMIT (TeleCRM refuses notes over 1,024 characters)
+ * Any textarea with data-eg-max="900" (plus maxlength="900") gets a live
+ * "123 / 900" counter under it: grey, amber near the limit, red at the limit.
+ * maxlength cuts typed and pasted text; the counter updates on every input
+ * (including paste) and after the form is reset.
+ */
+(function() {
+    function counterFor(ta) {
+        var n = ta.nextElementSibling;
+        if (n && n.classList.contains('eg-char-count')) return n;
+        n = document.createElement('p');
+        n.className = 'eg-char-count';
+        n.setAttribute('aria-live', 'polite');
+        n.style.cssText = 'font-size:12px;line-height:1.3;color:#6b7280;margin:4px 0 0;text-align:right;';
+        ta.insertAdjacentElement('afterend', n);
+        return n;
+    }
+
+    function update(ta) {
+        var max = parseInt(ta.getAttribute('data-eg-max'), 10);
+        if (!max) return;
+        if (ta.value.length > max) ta.value = ta.value.slice(0, max);
+        var len = ta.value.length;
+        var n = counterFor(ta);
+        n.textContent = len + ' / ' + max;
+        n.style.color = len >= max ? '#dc2626' : (len >= max * 0.9 ? '#d97706' : '#6b7280');
+        n.style.fontWeight = len >= max * 0.9 ? '600' : '400';
+    }
+
+    function initAll() {
+        var list = document.querySelectorAll('textarea[data-eg-max]');
+        for (var i = 0; i < list.length; i++) update(list[i]);
+    }
+
+    document.addEventListener('input', function(e) {
+        var t = e.target;
+        if (t && t.tagName === 'TEXTAREA' && t.hasAttribute('data-eg-max')) update(t);
+    }, true);
+
+    document.addEventListener('reset', function(e) {
+        var form = e.target;
+        setTimeout(function() {
+            var list = form.querySelectorAll ? form.querySelectorAll('textarea[data-eg-max]') : [];
+            for (var i = 0; i < list.length; i++) update(list[i]);
+        }, 0);
+    }, true);
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAll);
+    } else {
+        initAll();
+    }
+})();
