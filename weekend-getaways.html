@@ -1355,7 +1355,7 @@
           var nameV=f.full_name.value.trim(), phoneV=f.phone.value.trim(), emailV=f.email.value.trim();
           if(!nameV){ egqErr('Please enter your name.'); f.full_name.focus(); return; }
           var phoneDigits=phoneV.replace(/[^0-9]/g,'');
-          if(/[A-Za-z]/.test(phoneV) || phoneDigits.length<10 || phoneDigits.length>13){ egqErr('Please enter a valid phone number (digits only).'); f.phone.focus(); return; }
+          if(window.egValidPhone ? !window.egValidPhone(phoneV) : (/[A-Za-z]/.test(phoneV) || phoneDigits.length<10 || phoneDigits.length>13)){ egqErr('Please enter a 10-digit mobile number'); f.phone.focus(); return; }
           if(emailV && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailV)){ egqErr('Please enter a valid email address, or leave it blank.'); f.email.focus(); return; }
           btn.innerHTML='Sending...'; btn.disabled=true; msg.style.display='none';
           var d=Object.fromEntries(new FormData(f).entries());

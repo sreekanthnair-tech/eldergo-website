@@ -152,3 +152,70 @@
     }
 
 })();
+
+/**
+ * ELDERGO PHONE CHECK (SINGLE SOURCE OF TRUTH for every lead form)
+ * Blocks bad phone numbers BEFORE a form posts to web-lead-intake
+ * (an 8-digit number got through on 4 Nov and TeleCRM rejected the lead).
+ * Rule: strip spaces, dashes, brackets. OK = 10 digits starting 6-9, optionally
+ * with +91 / 91 / 0 in front; OR an international number: + then 8-15 digits.
+ * Covers: .waitlist-form, .contact-form, #egq-form, and any form whose action is web-lead-intake.
+ */
+(function() {
+    // PHONE-RULE-START
+    function egValidPhone(v) {
+        var s = String(v == null ? '' : v).replace(/[\s\-()\[\]]/g, '');
+        if (/^(\+91|91|0)?[6-9]\d{9}$/.test(s)) return true;
+        if (/^\+91/.test(s)) return false;
+        return /^\+\d{8,15}$/.test(s);
+    }
+    // PHONE-RULE-END
+    window.egValidPhone = egValidPhone;
+
+    var PHONE_MSG = 'Please enter a 10-digit mobile number';
+
+    function isLeadForm(form) {
+        if (!form || form.tagName !== 'FORM') return false;
+        if (form.matches('.waitlist-form, .contact-form, #egq-form')) return true;
+        var a = form.getAttribute('action') || '';
+        return a.indexOf('web-lead-intake') !== -1;
+    }
+
+    function errEl(input) {
+        var n = input.nextElementSibling;
+        if (n && n.classList.contains('eg-phone-err')) return n;
+        n = document.createElement('p');
+        n.className = 'eg-phone-err';
+        n.setAttribute('role', 'alert');
+        n.style.cssText = 'color:#dc2626;font-size:13px;font-weight:600;margin:4px 0 0;text-align:left;';
+        input.insertAdjacentElement('afterend', n);
+        return n;
+    }
+
+    // Capture phase: runs before each page's own submit handler, so nothing is sent.
+    document.addEventListener('submit', function(e) {
+        var form = e.target;
+        if (!isLeadForm(form)) return;
+        var input = form.querySelector('input[name="phone"]');
+        if (!input) return;
+        if (egValidPhone(input.value)) {
+            var old = input.nextElementSibling;
+            if (old && old.classList.contains('eg-phone-err')) old.remove();
+            return;
+        }
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        errEl(input).textContent = PHONE_MSG;
+        input.style.borderColor = '#dc2626';
+        input.focus();
+    }, true);
+
+    // Clear the message as soon as the visitor edits the number.
+    document.addEventListener('input', function(e) {
+        var input = e.target;
+        if (!input || input.name !== 'phone' || !isLeadForm(input.form)) return;
+        var n = input.nextElementSibling;
+        if (n && n.classList.contains('eg-phone-err')) n.remove();
+        input.style.borderColor = '';
+    }, true);
+})();
