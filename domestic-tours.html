@@ -356,15 +356,15 @@
             <div id="tour-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- Card: Andaman (Available) -->
-                <a href="domestic-tours/andaman.html" data-price="72000" data-date="2026-10-28" data-duration="6" data-status="available" data-tour="andaman" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
+                <a href="domestic-tours/andaman.html" data-price="71500" data-date="2026-12-09" data-duration="6" data-status="available" data-tour="andaman" class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer flex flex-col h-full group">
                     <div class="relative h-[250px] md:h-[280px] w-full overflow-hidden">
                         <img src="assets/tours/andaman.webp" loading="lazy" alt="Radhanagar Beach, Havelock — Andaman senior tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter saturate-110" width="1920" height="960">
                         <div class="absolute inset-0 bg-black/10 transition-opacity"></div>
                         <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-[13px] font-medium shadow-md flex items-center gap-2">
-                            <i class="fas fa-plane"></i> <span data-field="date">28 Oct 2026</span>
+                            <i class="fas fa-plane"></i> <span data-field="date">9 Dec 2026</span>
                         </div>
                         <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide" data-field="status">
-                            12 of 24 seats left
+                            Seats Available
                         </div>
                     </div>
                     <div class="p-5 md:p-6 flex flex-col flex-grow">
@@ -380,7 +380,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                <span data-field="price">₹72,000</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(Land package + Flights Extra)</span>
+                                <span class="text-sm font-semibold text-gray-500">Comfort</span> <span data-field="price">₹71,500</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(Land package + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -414,7 +414,7 @@
                         </div>
                         <div class="mt-auto flex flex-col gap-4 pt-2">
                             <div class="text-[24px] md:text-[26px] font-bold text-elder-black flex items-baseline gap-2">
-                                <span data-field="price">₹69,500</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(Land package + Flights Extra)</span>
+                                <span class="text-sm font-semibold text-gray-500">Comfort</span> <span data-field="price">₹69,500</span> <span class="text-[14px] font-medium text-gray-500 tracking-wide">(Land package + Flights Extra)</span>
                             </div>
                             <div class="w-full bg-elder-primary group-hover:bg-elder-secondary text-white text-center rounded-xl font-bold text-[16px] min-h-[52px] flex items-center justify-center transition-colors shadow-sm">
                                 View Tour
@@ -1032,9 +1032,9 @@
     <script>
     (function(){
       const TOUR_DATA = {
-        "andaman":   { status:"available",       dateISO:"2026-10-28", priceSort:"72000",  date:"28 Oct 2026",       price:"\u20B972,000", badgeText:"12 of 24 seats left", badge:"green" },
-        "rajasthan": { status:"available",      dateISO:"2026-12-17", priceSort:"69500",  date:"17 Dec 2026",       price:"\u20B969,500", badgeText:"Seats Available", badge:"green" },
-        "meghalaya": { status:"launching-soon", dateISO:"2027-01-01", priceSort:"999998", date:"Jan 2027",   price:"Price TBD", badgeText:"Launching Soon", badge:"amber" }
+        "andaman":   { status:"available",       dateISO:"2026-12-09", priceSort:"71500",  date:"9 Dec 2026",        price:"\u20B971,500", badgeText:"Seats Available",     badge:"green" },
+        "rajasthan": { status:"available",      dateISO:"2026-12-17", priceSort:"69500",  date:"17 Dec 2026",       price:"\u20B969,500", badgeText:"Seats Available", badge:"green" },
+        "meghalaya": { status:"launching-soon", dateISO:"2027-01-01", priceSort:"999998", date:"Jan 2027",   price:"Price TBD", badgeText:"Launching Soon", badge:"amber" }
       };
       const BADGE_BASE = "absolute top-4 right-4 text-white px-3 py-1.5 rounded-full text-[12px] font-bold shadow-md uppercase tracking-wide";
       const BADGE_COLOUR = { green:"bg-emerald-500", amber:"bg-amber-500", red:"bg-red-500" };

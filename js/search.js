@@ -14,7 +14,7 @@
     //    URLs are ROOT-RELATIVE (leading "/") so they resolve the same from any page depth.
     const mySearchData = [
         { title: 'Bali',                         url: '/international-tours.html',           subtitle: 'International Tours', keywords: 'asia, beach, temples, tropical, indonesia', trending: false },
-        { title: 'Sri Lanka',                    url: '/international-tours/srilanka.html',  subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island, sigiriya, kandy, colombo, nuwara eliya, ramayana', trending: true },
+        { title: 'Sri Lanka',                    url: '/international-tours/srilanka.html',  subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island, sigiriya, kandy, colombo, dambulla, bentota', trending: true },
         { title: 'Thailand',                     url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, islands, palaces, temples', trending: true },
         { title: 'Vietnam',                      url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, bay, old town, nature, culture' },
         { title: 'Singapore + Malaysia',         url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, city, gardens, culture' },
