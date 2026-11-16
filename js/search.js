@@ -15,10 +15,8 @@
     const mySearchData = [
         { title: 'Bali',                         url: '/international-tours.html',           subtitle: 'International Tours', keywords: 'asia, beach, temples, tropical, indonesia', trending: false },
         { title: 'Sri Lanka',                    url: '/international-tours/srilanka.html',  subtitle: 'International Tour', keywords: 'asia, beach, temples, tea, island, sigiriya, kandy, colombo, dambulla, bentota', trending: true },
-        { title: 'Thailand',                     url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, beach, islands, palaces, temples', trending: true },
         { title: 'Vietnam',                      url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, bay, old town, nature, culture' },
         { title: 'Singapore + Malaysia',         url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, city, gardens, culture' },
-        { title: 'China',                        url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, great wall, history, heritage' },
         { title: 'Andaman',                      url: '/domestic-tours/andaman.html',       subtitle: 'Domestic Tour',     keywords: 'india, beach, islands, sea, tropical, port blair, havelock, cellular jail, radhanagar, scuba', trending: true },
         { title: 'Meghalaya',                    url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, hills, waterfalls, nature, northeast', trending: true },
         { title: 'Rajasthan',                    url: '/domestic-tours/rajasthan.html',     subtitle: 'Domestic Tour',     keywords: 'india, desert, forts, palaces, heritage, udaipur, jodhpur, jaisalmer, sam dunes, camel, bikaner, mandawa, jaipur, amber fort, hawa mahal', trending: true },
