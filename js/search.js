@@ -21,7 +21,7 @@
         { title: 'China',                        url: '/international-tours.html',           subtitle: 'International Tour', keywords: 'asia, great wall, history, heritage' },
         { title: 'Andaman',                      url: '/domestic-tours/andaman.html',       subtitle: 'Domestic Tour',     keywords: 'india, beach, islands, sea, tropical, port blair, havelock, cellular jail, radhanagar, scuba', trending: true },
         { title: 'Meghalaya',                    url: '/domestic-tours.html',               subtitle: 'Domestic Tour',     keywords: 'india, hills, waterfalls, nature, northeast', trending: true },
-        { title: 'Rajasthan',                    url: '/domestic-tours/rajasthan.html',     subtitle: 'Domestic Tour',     keywords: 'india, desert, forts, palaces, heritage, udaipur, jodhpur, jaisalmer, sam dunes, camel, bikaner, mandawa, jaipur, amber fort, hawa mahal' },
+        { title: 'Rajasthan',                    url: '/domestic-tours/rajasthan.html',     subtitle: 'Domestic Tour',     keywords: 'india, desert, forts, palaces, heritage, udaipur, jodhpur, jaisalmer, sam dunes, camel, bikaner, mandawa, jaipur, amber fort, hawa mahal', trending: true },
         { title: 'Coorg',                        url: '/weekend-getaways.html',             subtitle: 'Weekend Getaway',   keywords: 'india, coffee, hills, nature, karnataka' },
         { title: 'Hampi',                        url: '/weekend-getaways.html',             subtitle: 'Weekend Getaway',   keywords: 'india, heritage, ruins, history, karnataka' },
         { title: 'Divine Kashi & Prayagraj',     url: '/spiritual-journeys.html',           subtitle: 'Spiritual Journey', keywords: 'india, temple, ganga, varanasi, pilgrimage' },
